@@ -29,10 +29,16 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
+      - name: Change to slides directory
+        working-directory: ./curso-ia-luarca-slides
+        run: echo "Switched to curso-ia-luarca-slides directory"
+
       - name: Install dependencies
+        working-directory: ./curso-ia-luarca-slides
         run: pnpm install
 
       - name: Build slides
+        working-directory: ./curso-ia-luarca-slides
         run: pnpm build --base /${{ github.event.repository.name }}/
 
       - name: Setup Pages
