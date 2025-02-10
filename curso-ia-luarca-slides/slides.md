@@ -11,6 +11,7 @@ info: |
 author: José María Llorián Álvarez
 
 class: text-center
+css: ./style.css
 drawings:
   presenterOnly: true
   persist: false
@@ -24,3 +25,5 @@ drawings:
 IES Carmen y Severo Ochoa
 
 18 de febrero de 2025
+
+---
