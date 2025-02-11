@@ -2,3 +2,9 @@
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
   }
   
+.slide-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+}
