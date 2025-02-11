@@ -16,8 +16,8 @@ drawings:
   presenterOnly: true
   persist: false
 
-  transition: slide-left
-  mdc: true
+transition: slide-left
+mdc: true
 ---
 
 # Introducción a la Inteligencia Artificial para Docentes
@@ -34,3 +34,39 @@ IES Carmen y Severo Ochoa
   - No se preocupen por tomar notas que les voy a pasar todos los materiales.
  -->
 ---
+transition: fade-out
+---
+
+# José María Llorián Álvarez
+
+
+
+¿Quién soy y qué hago aquí?
+<br>
+<br>
+<img border="rounded" src="https://media1.tenor.com/m/4ho5rKl9UtYAAAAd/dog-doggo.gif" alt="meme dog maths" style="width: 150px; float: left; margin-right: 15px;">
+<br>
+<br>
+<br>
+<br>
+<br>
+
+![Foto profesional](./recursos/foto-profesional.jpg){style="border-radius: 75%; width: 80px; float: right;"}
+
+👋 ¡Hola! Soy un apasionado del **[aprendizaje]{style="color: rgb(44, 145, 179);"}** y la innovación.
+He liderado el desarrollo de sistemas de búsqueda potenciados por IA y cahtbots, creando experiencias que combinan tecnología y <span v-mark.circle.orange>creatividad</span>.
+
+<br>
+<br>
+
+<div v-click>
+  📍 Navia, Asturias, España  
+  ✉️ josellorian@gmail.com | <a href="https://www.linkedin.com/in/llorian">LinkedIn</a>
+<br>
+</div>
+<br>
+<br>
+
+<div class="slide-counter">
+  <SlideCurrentNo />/<SlidesTotal />
+</div>
