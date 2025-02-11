@@ -1,7 +1,7 @@
 ---
 theme: seriph
 # background image credit: moren hsu https://unsplash.com/@moren
-background: ./recursos/lockers-Moren-Hsu.jpg
+background: https://cover.sli.dev
 title: Introducción a la Inteligencia Artificial para Docentes
 info: |
   ## Intruducción a la Inteligencia Artificial para Docentes
