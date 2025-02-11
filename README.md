@@ -45,7 +45,7 @@ Work In Progress
     3.  Refinar material docente para atención a la diversidad.
     4.  Generar documentos finales listos para distribuir.
     5.  Usar agentes para tareas específicas.
-14. Glossario interactivo
+14. Glosario interactivo
 15. Material adicional y cómo acceder al curso
 
 # Uso de Slidev
