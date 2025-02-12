@@ -166,6 +166,11 @@ h1 {
  -->
 ---
 src: ./pages/IA-ML-DL.md
-hide: false
+hide: true
 transition: fade
+---
+---
+src: ./pages/AI-ML-DL-interactivo.md
+hide: false
+transition: fase
 ---
