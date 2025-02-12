@@ -167,4 +167,5 @@ h1 {
 ---
 src: ./pages/IA-ML-DL.md
 hide: false
+transition: fade
 ---
