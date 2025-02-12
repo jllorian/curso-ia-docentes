@@ -164,3 +164,17 @@ h1 {
 </style>
 <!-- Esta slide muestra las ventajas del uso de la IA en educación. Pero de todo tipo de IA, como se verá más adelante, esta formación se enfoca en el uso de IA generativa.
  -->
+---
+src: ./pages/IA-ML-DL.md
+hide: true
+transition: fade
+---
+---
+src: ./pages/AI-ML-DL-interactivo.md
+hide: false
+transition: fase
+---
+---
+src: ./pages/glosario.md
+transition: slide-left
+---
