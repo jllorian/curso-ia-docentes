@@ -174,3 +174,7 @@ src: ./pages/AI-ML-DL-interactivo.md
 hide: false
 transition: fase
 ---
+---
+src: ./pages/glosario.md
+transition: slide-left
+---
