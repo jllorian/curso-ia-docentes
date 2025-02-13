@@ -3,7 +3,7 @@
 <MessageBox 
   type="system" 
   title="Mensaje del sistema" 
-  icon="/icons/system.svg" 
+  icon="../recursos/icon/systemIcon.svg"
   :click-step="1"
 >
   Eres un profesor de biología con 10 años de experiencia...
@@ -12,7 +12,7 @@
 <MessageBox 
   type="user" 
   title="Mensaje del usuario" 
-  icon="/icons/user.svg" 
+  icon="../recursos/icon/userIcon.svg" 
   :click-step="2"
 >
   Diseña una práctica de laboratorio virtual
@@ -21,7 +21,7 @@
 <MessageBox 
   type="ai" 
   title="Mensaje de la IA" 
-  icon="/recursos/venn/vennIA.svg" scale
+  icon="../recursos/icon/iaIcon.svg" scale
   :click-step="4"
   is-code
 >

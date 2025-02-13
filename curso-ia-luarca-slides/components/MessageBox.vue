@@ -2,7 +2,11 @@
     <div class="message" :class="type" v-click="clickStep">
       <div class="header">
         <span class="title">{{ title }}</span>
-        <img :src="icon" class="icon" alt="icono">
+        <img
+          :src="icon"
+          class="icon"
+          alt="icono"
+          @load="handleIconLoad"/>
       </div>
       
       <div class="content" :class="{ 'code-format': isCode }">
@@ -12,6 +16,10 @@
   </template>
   
   <script setup>
+  const handleIconLoad = () => {
+  console.log('Icono cargado');
+  };
+
   defineProps({
     type: {
       type: String,
@@ -39,6 +47,7 @@
     opacity: 0;
     animation: message-entry 4s ease-out forwards;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    overflow: visible;
   }
   
   .system {
@@ -71,13 +80,15 @@
   }
   
   .icon {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  opacity: 1;
-  pointer-events: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 1;
+    animation: none;
+    transition: none;
+    scale: 3.5;
   }
   
   .code-format {
