@@ -176,6 +176,7 @@ transition: fade
 ---
 ---
 src: ./pages/context-window.md
+hide: false
 transition: fade in
 ---
 ---
