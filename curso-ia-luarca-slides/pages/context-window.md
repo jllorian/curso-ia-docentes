@@ -32,7 +32,7 @@ class: px-20
    Tablas de sustitución para estructurar oraciones: "El titular debe ser ____"...
 </MessageBox>
 
-<Arrow v-click="[4,5]" x1="850" y1="60" x2="800" y2="120" color="#2196F3" width="2" arrowSize="1" two-way: false />
+<Arrow v-click="[4,5]" x1="850" y1="70" x2="780" y2="110" color="#2196F3" width="2" arrowSize="1" two-way: false />
 <p v-click="[4,5]" class="absolute top-8 right-12 opacity-50 transform -rotate-10">ponemos el modelo en un estado</p>
 
 <!--
