@@ -57,7 +57,7 @@ He liderado el desarrollo de sistemas de búsqueda potenciados por IA y chatbots
 
 <br>
 <br>
-<div v-click="2">
+<div v-click="3">
   📍 Navia, Asturias, España  
   ✉️ josellorian@gmail.com | <a href="https://www.linkedin.com/in/llorian">LinkedIn</a>
 </div>
