@@ -3,7 +3,7 @@
       <div class="term-header">
         <h3>{{ term }}</h3>
         <a v-if="source" :href="source" target="_blank" class="source-link">
-          <carbon:link class="icon"/>
+          <carbon:link class="source-link"/>
         </a>
       </div>
       <p class="definition">{{ definition }}</p>
@@ -27,7 +27,7 @@
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
   }
   
   .term-header {
@@ -38,15 +38,11 @@
   }
   
   .source-link {
+    position: relative;
     color: #4EC5D4;
     display: flex;
     align-items: center;
     gap: 0.3rem;
-  }
-  
-  .icon {
-    width: 16px;
-    height: 16px;
   }
   </style>
   
