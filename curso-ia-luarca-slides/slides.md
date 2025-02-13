@@ -73,7 +73,7 @@ transition: slide-up
 # Nuestros objetivos para hoy:
 
 <ul>
-  <li v-click="1">🤓 <span v-mark.red="4"><b>Saber</b></span> qué es la IA a nivel general y el *GenAI* a nivel particular.</li>
+  <li v-click="1">🤓 <span v-mark.red="4"><b>Saber</b></span> qué es la IA a nivel general y el <i>GenAI</i> a nivel particular.</li>
   <li v-click="2">🧠 <span v-mark.red="5"><b>Aprender</b></span> a usar la IA de manera responsable.</li>
   <li v-click="3">🤖 <span v-mark.red="6"><b>Usar</b></span> la IA para elaborar adaptaciones, generar andamiaje, y refinar material en el marco de una programación docente y teniendo en cuenta los criterios de evaluación.</li>
 </ul>

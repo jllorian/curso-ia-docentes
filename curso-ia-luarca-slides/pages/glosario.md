@@ -28,7 +28,7 @@ style: space-between
 </div>
 <GlossaryCard
   term="Aprendizaje Automático"
-  definition="O Machine Learning (ML), es un subcampo de la IA que se centra en desarrollar modelos estadísticos que permitan a los sistemas aprender y tomar decisiones en base a inferencias extraidas de los datos."
+  definition="O Machine Learning (ML), es un subcampo de la IA que se centra en desarrollar modelos estadísticos que permitan a los sistemas aprender y tomar decisiones en base a inferencias extraídas de los datos."
   source="https://docs.aws.amazon.com/whitepapers/latest/aws-caf-for-ai/aws-caf-for-ai.html#introduction-to-ai"
 />
 

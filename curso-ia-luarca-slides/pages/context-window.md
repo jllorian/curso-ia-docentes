@@ -1,3 +1,6 @@
+---
+class: px-20
+---
 # *GenAI* ¿Cómo funciona?
 
 <MessageBox 
@@ -6,14 +9,14 @@
   icon="../recursos/icon/systemIcon.svg"
   :click-step="1"
 >
-  Eres un experto pedagogo en lengua castellana para estudiantes de ESO españoles. Diseña y expone tres niveles de andamiaje para la siguiente tarea formativa:
+  Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span v-mark.underline.orange=3>Diseña y expone tres niveles de andamiaje para la siguiente tarea formativa</span>:
 </MessageBox>
 
 <MessageBox 
   type="user" 
   title="Mensaje del usuario" 
   icon="../recursos/icon/userIcon.svg" 
-  :click-step="3"
+  :click-step="5"
 >
   "Periodistas por un día"
   Los estudiantes asumen el rol de periodistas para crear un reportaje sobre las variedades lingüísticas de su ...
@@ -23,11 +26,17 @@
   type="ai" 
   title="Mensaje de la IA" 
   icon="../recursos/icon/iaIcon.svg" scale
-  :click-step="4"
+  :click-step="7"
   is-code
 >
    Tablas de sustitución para estructurar oraciones: "El titular debe ser ____"...
 </MessageBox>
+
+<Arrow v-click="[4,5]" x1="850" y1="70" x2="780" y2="110" color="#2196F3" width="2" arrowSize="1" two-way: false />
+<p v-click="[4,5]" class="absolute top-8 right-12 opacity-50 transform -rotate-10">ponemos el modelo en un estado</p>
+
+<Arrow v-click="[6,7]" x1="111" y1="270" x2="210" y2="300" color="#4CAF50" width="2" arrowSize="1" two-way: false />
+<p v-click="[6,7]" class="absolute left-10 bottom-65 opacity-50 transform -rotate-25">le damos la tarea</p>
 
 <!--
 - Un modelo de IA generativa por tanto tiene un "modo de pensar", que se ha desarrollado en base a los datos con los que ha sido entrenado. En la ventana de contexto, nosotros le damos nueva información, que en teoría no ha visto antes, para que haga el proceso de inferencia.
