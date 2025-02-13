@@ -40,7 +40,7 @@
   }
 
   .message {
-    margin: 1rem auto;
+    margin: .5rem auto;
     padding: 1.2rem;
     border-radius: 8px;
     width: 85%;

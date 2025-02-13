@@ -1,3 +1,6 @@
+---
+class: px-20
+---
 # *GenAI* ¿Cómo funciona?
 
 <MessageBox 
