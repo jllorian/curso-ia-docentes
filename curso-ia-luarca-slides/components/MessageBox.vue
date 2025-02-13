@@ -13,7 +13,7 @@
         <slot></slot>
       </div>
     </div>
-  </template>
+</template>
   
   <script setup>
   const handleIconLoad = () => {
