@@ -3,31 +3,30 @@
 <MessageBox 
   type="system" 
   title="Mensaje del sistema" 
-  icon="/icons/system.svg" 
+  icon="../recursos/icon/systemIcon.svg"
   :click-step="1"
 >
-  Eres un profesor de biología con 10 años de experiencia...
+  Eres un experto pedagogo en lengua castellana para estudiantes de ESO españoles. Diseña y expone tres niveles de andamiaje para la siguiente tarea formativa:
 </MessageBox>
 
 <MessageBox 
   type="user" 
   title="Mensaje del usuario" 
-  icon="/icons/user.svg" 
-  :click-step="2"
+  icon="../recursos/icon/userIcon.svg" 
+  :click-step="3"
 >
-  Diseña una práctica de laboratorio virtual
+  "Periodistas por un día"
+  Los estudiantes asumen el rol de periodistas para crear un reportaje sobre las variedades lingüísticas de su ...
 </MessageBox>
 
 <MessageBox 
   type="ai" 
   title="Mensaje de la IA" 
-  icon="/recursos/venn/vennIA.svg" scale
+  icon="../recursos/icon/iaIcon.svg" scale
   :click-step="4"
   is-code
 >
-  Simulación 3D usando BioDigital:
-  - Visualización interactiva de células
-  - Control de zoom por capas
+   Tablas de sustitución para estructurar oraciones: "El titular debe ser ____"...
 </MessageBox>
 
 <!--
