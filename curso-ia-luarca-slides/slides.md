@@ -172,7 +172,11 @@ transition: fade
 ---
 src: ./pages/AI-ML-DL-interactivo.md
 hide: false
-transition: fase
+transition: fade
+---
+---
+src: ./pages/context-window.md
+transition: fade in
 ---
 ---
 src: ./pages/glosario.md
