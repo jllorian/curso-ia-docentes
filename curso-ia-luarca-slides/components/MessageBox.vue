@@ -30,7 +30,7 @@
     icon: String,
     clickStep: Number,
     isCode: Boolean
-  })
+  });
   </script>
   
   <style>

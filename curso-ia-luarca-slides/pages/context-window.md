@@ -4,23 +4,24 @@ class: px-20
 # *GenAI* ¿Cómo funciona?
 
 <div class="message-group-container">
-  <MessageBox 
-    type="system" 
-    title="Mensaje del sistema" 
-    icon="../recursos/icon/systemIcon.svg"
-    :click-step="1"
-  >
-    Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span v-mark.underline.orange=3>Diseña y expone tres niveles de andamiaje para la siguiente tarea formativa</span>:
-  </MessageBox>
-
-  <MessageBox 
-    type="user" 
-    title="Mensaje del usuario" 
-    icon="../recursos/icon/userIcon.svg"
-    :click-step="5"
-  >
-    "Periodistas por un día" Los estudiantes asumen el rol de periodistas para crear un reportaje sobre las variedades lingüísticas de su ...
-  </MessageBox>
+  <div class="message-wrapper">
+    <MessageBox 
+      type="system" 
+      title="Mensaje del sistema" 
+      icon="../recursos/icon/systemIcon.svg"
+      :click-step="1"
+    >
+      Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span   v-mark.underline.orange=3>Diseña y expone tres niveles de andamiaje para la siguiente tarea formativa</span>:
+    </MessageBox>
+    <MessageBox 
+      type="user" 
+      title="Mensaje del usuario" 
+      icon="../recursos/icon/userIcon.svg"
+      :click-step="5"
+    >
+      "Periodistas por un día" Los estudiantes asumen el rol de periodistas para crear un reportaje sobre las variedades lingüísticas de  su ...
+    </MessageBox>
+  </div>
 </div>
 
 <MessageBox 
@@ -40,6 +41,8 @@ class: px-20
 
 <style>
 .message-group-container {
+  display: flex;
+  flex-direction: column;
   position: relative;
   border: 2px solid #4CAF50;
   border-radius: 12px;
@@ -69,6 +72,10 @@ class: px-20
 .message:last-child {
   position: relative;
   margin-bottom: 0;
+}
+
+.message-wrapper {
+  margin-bottom: 0rem;
 }
 </style>
 
