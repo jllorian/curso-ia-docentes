@@ -30,7 +30,7 @@
     icon: String,
     clickStep: Number,
     isCode: Boolean
-  })
+  });
   </script>
   
   <style>
@@ -41,7 +41,7 @@
 
   .message {
     margin: .5rem auto;
-    padding: 1.2rem;
+    padding: 1.1rem;
     border-radius: 8px;
     width: 85%;
     opacity: 0;
