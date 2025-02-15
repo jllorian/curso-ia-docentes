@@ -251,3 +251,42 @@ Puede ser interesante mencionar, que debido a que en la actualidad los distintos
 Durante el proceso de inferencia, el modelo trata de reconocer patrones en la información nueva que le estás mostrando, para así generar el contenido con mayor grado de significación para el patrón reconocido. ![NOTE] Esto es una sobre-simplificación.
 -->
 ---
+
+# ¡Veámoslo en otro ejemplo!
+El rápido progreso en *GenAI* nos permite usar LLMs en local. Suelen ser versiones "reducidas" adaptadas a las capacidades de nuestra máquina.
+
+[Ollama](https://ollama.com/download) es una herrmienta que permite usar *GenAI* en tu ordedador, sin necesidad de internet.
+
+````md magic-move {lines: true}
+```zsh {*}
+ollama pull deepseek-r1
+```
+```zsh {1|2-6|7-8,9}
+pulling manifest 
+pulling 96c415656d37... 100% ▕████████████████████████████████████████████████████████████████ 4.7 GB                         
+pulling 369ca498f347... 100% ▕████████████████████████████████████████████████████████████████ 387 B                         
+pulling 6e4c38e1172f... 100% ▕████████████████████████████████████████████████████████████████ 1.1 KB                         
+pulling f4d24e9138dd... 100% ▕████████████████████████████████████████████████████████████████ 148 B                         
+pulling 40fb844194b2... 100% ▕████████████████████████████████████████████████████████████████ 487 B                         
+verifying sha256 digest 
+writing manifest 
+success 
+```
+````
+
+<!--
+# Ejemplo con DeepSeek
+
+Hagamos el ejemplo con DeepSeek, durante el proceso de razonamiento del model, podrán ver cómo acude al historial.
+
+Queries:
+> Mi nombre es José, ¿tú quién eres?
+
+> <think> + response
+
+> ¿sabes cómo me llamo?
+
+> /exit
+
+Puede dar problemas, estemos listos para saltar a llama3.1
+-->
