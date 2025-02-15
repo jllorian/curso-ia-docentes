@@ -175,6 +175,47 @@ hide: false
 transition: fade
 ---
 ---
+class: text-center
+transition: slide-down
+---
+
+# Tipos de GenAI
+
+¿Clasificaciones?¿Cuántos conocéis?
+
+<div v-click>
+```mermaid {theme: 'neutral', alt: 'Taxonomía basada en arquitectura', scale: 0.8}
+graph TD
+A[Algunos tipos de GenAI] --> B[GANs]
+A --> C[VAEs]
+A --> D[Transformers]
+A --> E[Diffusion]
+A --> F[Flow]
+```
+</div>
+
+<div class="text-sm" v-click>
+
+| **Tipo de entrada** | **Salida común** | **Aplicaciones típicas** |
+| :-- | :-- | :-- |
+| Texto | Texto, código | Asistentes virtuales, traducción |
+| Texto | Imagen | Diseño gráfico, publicidad |
+| Imagen | Imagen modificada | Edición fotográfica, medicina |
+| Audio | Texto/audio | Transcripción, generación de podcasts |
+| Multimodal | Cualquier formato | Educación interactiva, videojuegos |
+
+</div>
+
+<!--
+- Generative Adversarial Networks -> Dos sistemas rivales, uno genera contenido y otro lo evalúa para detectar si es real o artificial. Ej: Artista y crítico de arte.
+- Variational Autoencoders -> Comprinen información y la regeneran con variaciones. Ej: Resumen de docuemntos.
+- Diffusion -> De imagen borrosa a resultado nítido (o viceversa).
+- Flow -> transformaciones reversibles desde números aleatorios.
+- Faltan muchos tipos más: Autorregresivos, energéticos, y claro, híbridos.
+
+-->
+
+---
 src: ./pages/context-window.md
 hide: false
 transition: fade in
