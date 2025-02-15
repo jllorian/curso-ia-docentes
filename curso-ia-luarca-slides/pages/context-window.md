@@ -3,7 +3,7 @@ class: px-20
 ---
 # *GenAI* ¿Cómo funciona?
 
-<div class="message-group-container">
+<div class="message-group-container" v-click>
   <div class="message-wrapper">
     <MessageBox 
       type="system" 
@@ -27,7 +27,7 @@ class: px-20
 <MessageBox 
   type="ai" 
   title="Mensaje de la IA" 
-  icon="../recursos/icon/iaIcon.svg" scale
+  icon="../recursos/icon/iaIcon.svg"
   :click-step="7"
   is-code
 >
@@ -97,6 +97,7 @@ Es importante ser conscientes del historial que estamos construyendo al interact
 
 ---
 class: px-20
+transition: slide-up
 ---
 
 # ¡Veamos un ejemplo!
@@ -129,4 +130,123 @@ Encontrarás los *prompts* en [este archivo](PONERLINKDEGITHUB). Desde [Perplexi
 **No** tenemos control real sobre el ´system_message´ desde al interfaz de usuario. Estas custom instruction seguramente formen parte del ´system_message´ que le esté pasando el desarrollador al modelo.
 
 Del mismo modo, no podemos conocer la frecuencia con la que el desarrollador recuerda el ´system_message´al modelo. Por esto, es recomendable mantener conversaciones breves y centradas en el rol y tarea asignados al modelo.
+-->
+
+---
+transition: slide-right
+---
+
+# ¿Cómo mantiene una conversación?
+
+<div class="message-group-container">
+  <div class="historial-container" v-click="1">
+    <div class="message-wrapper">
+      <MessageBox 
+        type="system" 
+        title="Mensaje del sistema" 
+        icon="../recursos/icon/systemIcon.svg"
+        :click-step="1"
+      >
+      </MessageBox>
+      <MessageBox 
+        type="user" 
+        title="Mensaje del usuario" 
+        icon="../recursos/icon/userIcon.svg"
+        :click-step="1"
+      >
+      </MessageBox>
+      <MessageBox 
+        type="ai" 
+        title="Mensaje de la IA" 
+        icon="../recursos/icon/iaIcon.svg"
+        :click-step="1"
+      >
+      </MessageBox>
+    </div>
+  </div>
+  <MessageBox 
+    type="user" 
+    title="Mensaje del usuario" 
+    icon="../recursos/icon/userIcon.svg"
+    :click-step="2"
+    >
+  </MessageBox>
+</div>
+
+<drag v-drag="[33,404,924,129]">
+<MessageBox
+  type="ai" 
+  title="Mensaje de la IA" 
+  icon="../recursos/icon/iaIcon.svg"
+  :click-step="3"
+  is-code
+>Este contenido ha sido inferido a partir de la "información nueva" que se ha mostrado al modelo en la ventana de contexto.
+</MessageBox>
+</drag>
+
+<style>
+  @keyframes message-entry {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  .message-group-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  padding: 0.5rem;
+  background: linear-gradient(to bottom right, 
+    rgba(76, 175, 80, 0.05) 0%, 
+    rgba(76, 175, 80, 0.02) 100%);
+}
+
+.message-group-container::after {
+  content: "Ventana de Contexto";
+  position: absolute;
+  top: -0.8rem;
+  left: 1.5rem;
+  background: white;
+  padding: 0 0.5rem;
+  color: #4CAF50;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.historial-container {
+  position:relative;
+  border: 2px solid #d230f7;
+  border-radius: 12px;
+  padding: 0.5rem;
+  animation: message-entry 4s ease-out forwards;
+}
+
+.historial-container::after {
+  content:"Historial";
+  position: absolute;
+  bottom: -0.8rem;
+  right: 1.5rem;
+  background: white;
+  padding:0 0.5rem;
+  color: #d230f7;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.message {
+  position: relative;
+  margin-bottom: 0rem;
+  font-size: 0.8em;
+  padding: 0.8rem;
+}
+</style>
+
+<!--
+# La ventana de contexto
+Es la información no vista antes por el modelo, a la que aplica su "manera de pensar" infirendo así algo totalmente nuevo.
+
+Puede ser interesante mencionar, que debido a que en la actualidad los distintos proveedores de modelos los están mejorando a base de darles más y más información durante el entrenamiento, es posible que la ventana de contexto no les esté mostrando información realmente nueva. ![NOTE] Sería una situación de Overfitting. Pero en teoría deepseek cambia este paradigma.
+
+Durante el proceso de inferencia, el modelo trata de reconocer patrones en la información nueva que le estás mostrando, para así generar el contenido con mayor grado de significación para el patrón reconocido. ![NOTE] Esto es una sobre-simplificación.
 -->
