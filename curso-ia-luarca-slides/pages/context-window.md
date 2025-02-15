@@ -67,6 +67,7 @@ class: px-20
 .message {
   position: relative;
   margin-bottom: 0rem;
+  width: 90%;
 }
 
 .message:last-child {
@@ -76,6 +77,11 @@ class: px-20
 
 .message-wrapper {
   margin-bottom: 0rem;
+}
+
+.slidev-layout {
+  background-color: #ffffff !important;
+  color: #121212 !important;
 }
 </style>
 
