@@ -8,7 +8,7 @@ class: px-20
     <MessageBox 
       type="system" 
       title="Mensaje del sistema" 
-      icon="../recursos/icon/systemIcon.svg"
+      icon="././recursos/icon/systemIcon.svg"
       :click-step="1"
     >
       Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span   v-mark.underline.orange=3>Diseña y expone tres niveles de andamiaje para la siguiente tarea formativa</span>:
@@ -16,7 +16,7 @@ class: px-20
     <MessageBox 
       type="user" 
       title="Mensaje del usuario" 
-      icon="../recursos/icon/userIcon.svg"
+      icon="././recursos/icon/userIcon.svg"
       :click-step="5"
     >
       "Periodistas por un día" Los estudiantes asumen el rol de periodistas para crear un reportaje sobre las variedades lingüísticas de  su ...
@@ -27,7 +27,7 @@ class: px-20
 <MessageBox 
   type="ai" 
   title="Mensaje de la IA" 
-  icon="../recursos/icon/iaIcon.svg"
+  icon="././recursos/icon/iaIcon.svg"
   :click-step="7"
   is-code
 >
@@ -144,21 +144,21 @@ transition: slide-right
       <MessageBox 
         type="system" 
         title="Mensaje del sistema" 
-        icon="../recursos/icon/systemIcon.svg"
+        icon="././recursos/icon/systemIcon.svg"
         :click-step="1"
       >
       </MessageBox>
       <MessageBox 
         type="user" 
         title="Mensaje del usuario" 
-        icon="../recursos/icon/userIcon.svg"
+        icon="././recursos/icon/userIcon.svg"
         :click-step="1"
       >
       </MessageBox>
       <MessageBox 
         type="ai" 
         title="Mensaje de la IA" 
-        icon="../recursos/icon/iaIcon.svg"
+        icon="././recursos/icon/iaIcon.svg"
         :click-step="1"
       >
       </MessageBox>
@@ -167,7 +167,7 @@ transition: slide-right
   <MessageBox 
     type="user" 
     title="Mensaje del usuario" 
-    icon="../recursos/icon/userIcon.svg"
+    icon="././recursos/icon/userIcon.svg"
     :click-step="2"
     >
   </MessageBox>
@@ -177,7 +177,7 @@ transition: slide-right
 <MessageBox
   type="ai" 
   title="Mensaje de la IA" 
-  icon="../recursos/icon/iaIcon.svg"
+  icon="././recursos/icon/iaIcon.svg"
   :click-step="3"
   is-code
 >Este contenido ha sido inferido a partir de la "información nueva" que se ha mostrado al modelo en la ventana de contexto.
@@ -250,3 +250,4 @@ Puede ser interesante mencionar, que debido a que en la actualidad los distintos
 
 Durante el proceso de inferencia, el modelo trata de reconocer patrones en la información nueva que le estás mostrando, para así generar el contenido con mayor grado de significación para el patrón reconocido. ![NOTE] Esto es una sobre-simplificación.
 -->
+---
