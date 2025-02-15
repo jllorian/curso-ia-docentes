@@ -61,5 +61,3 @@ layout: two-cols
   definition="Son modelos de redes neuronales de aprendizaje profundo entrenados con muchísimos datos, lo que les confiere adaptabilidad para realizar un amplio rango de tareas diferentes dependientes del *prompt* introducido. Ej: GPT-4 sería la base de chatGPT (4-Turbo)."
   source="https://aws.amazon.com/what-is/foundation-models/"
 />
-
-https://aws.amazon.com/what-is/foundation-models/

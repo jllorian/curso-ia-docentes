@@ -11,7 +11,7 @@ class: px-20
       icon="././recursos/icon/systemIcon.svg"
       :click-step="1"
     >
-      Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span   v-mark.underline.orange=3>Diseña y expone tres niveles de andamiaje para la siguiente tarea formativa</span>:
+      Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span   v-mark.underline.orange=3>Diseña y expón tres niveles de andamiaje para la siguiente tarea formativa</span>:
     </MessageBox>
     <MessageBox 
       type="user" 
@@ -173,7 +173,7 @@ transition: slide-right
   </MessageBox>
 </div>
 
-<drag v-drag="[33,404,924,129]">
+<drag v-drag="[51,389,924,129]">
 <MessageBox
   type="ai" 
   title="Mensaje de la IA" 
@@ -250,6 +250,7 @@ Puede ser interesante mencionar, que debido a que en la actualidad los distintos
 
 Durante el proceso de inferencia, el modelo trata de reconocer patrones en la información nueva que le estás mostrando, para así generar el contenido con mayor grado de significación para el patrón reconocido. ![NOTE] Esto es una sobre-simplificación.
 -->
+
 ---
 
 # ¡Veámoslo en otro ejemplo!
