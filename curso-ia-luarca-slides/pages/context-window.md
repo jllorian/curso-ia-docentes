@@ -111,7 +111,7 @@ Vamos a hacer que un modelo entre en un estado y realice una tarea concreta
 <div>
 
 ## ¿Cómo replicar el ejemplo?
-Encontrarás los *prompts* en [este archivo](PONERLINKDEGITHUB). Desde [Perplexity](https://www.perplexity.ai/):
+Encontrarás los *prompts* en [este archivo](https://github.com/jllorian/curso-ia-docentes/blob/main/examples.md). Desde [Perplexity](https://www.perplexity.ai/):
 
 1. **Crea un Space** → Sección izquierda de la interfaz.
 2. **Custom Instructions** → Introducir texto con directrices.

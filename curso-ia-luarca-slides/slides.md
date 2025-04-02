@@ -162,8 +162,26 @@ h1 {
   color: #ffffff !important;
 }
 </style>
-<!-- Esta slide muestra las ventajas del uso de la IA en educación. Pero de todo tipo de IA, como se verá más adelante, esta formación se enfoca en el uso de IA generativa.
- -->
+
+<!--
+Esta slide muestra las ventajas del uso de la IA en educación.
+Pero de todo tipo de IA, como se verá más adelante, esta formación se enfoca en el uso de IA generativa.
+
+- Aprendizaje personalizado: La IA puede adaptar el contenido y el ritmo de aprendizaje a las necesidades
+  individuales de cada estudiante, lo que permite una educación más personalizada y efectiva. Más adelante, 
+  veremos cómo podemos construir andamiaje para apoyar a nuestros alumnado de manera personalizada.
+
+- Automatización de tareas: La IA puede ayudar a los docentes a automatizar tareas administrativas y repetitivas,
+  como la corrección de exámenes o la gestión de horarios, lo que les permite centrarse en la enseñanza y el 
+  aprendizaje. Más adelante veremos cómo podemos usar la IA para generar materiales educativos.
+
+- Inclusión educativa: La IA puede facilitar la inclusión de estudiantes con necesidades especiales al ofrecer
+  herramientas y recursos adaptados a sus necesidades. Más adelante veremos cómo podemos usar la IA para 
+  generar materiales educativos adaptados a la diversidad del alumnado.
+
+El contenido de esta slide y la descripción para el presentador que la acompañan ha sido generado al 100% por IA.
+-->
+
 ---
 src: ./pages/IA-ML-DL.md
 hide: true
