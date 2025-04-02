@@ -194,6 +194,90 @@ transition: fade
 ---
 ---
 class: text-center
+transition: slide-up
+---
+
+# Generative AI
+GenAI
+
+<div class="grid grid-rows-3 gap-4 items-center">
+
+  <!-- Fila superior: Imágenes encima de "Datos diversos" -->
+  <div class="flex justify-center space-x-4">
+    <v-click>
+      <img src="./recursos/Chomsky.png" class="h-20" alt="Chomsky" />
+    </v-click>
+    <v-click>
+      <img src="./recursos/euclidean-vector.jpg" class="h-20" alt="Maths" />
+    </v-click>
+    <v-click>
+      <img src="./recursos/vecteezy-science.jpg" class="h-20" alt="https://www.vecteezy.com/free-vector/isolated" />
+    </v-click>
+  </div>
+
+  <!-- Fila central: Diagrama Mermaid -->
+<div>
+```mermaid {theme: 'default', alt: 'Construcción de Modelo Fundacional', scale: 0.60}
+  flowchart LR
+  A[Recolección\nde Datos]:::blue --> B{{Identificación\nde Patrones}}:::cyan
+  B --> C[Creación de Modelo\nFundacional]:::green
+  C --> D[Introducción\nde Nueva\nInformación]:::lime
+  D --> E[Generación\nde Contenido]:::yellow
+
+  classDef blue fill:#4285F4,color:white
+  classDef cyan fill:#00BCD4,color:white
+  classDef green fill:#4CAF50,color:white
+  classDef lime fill:#8BC34A,color:white
+  classDef yellow fill:#FFEB3B,color:black
+```
+</div>
+
+  <!-- Fila inferior: Imágenes debajo del diagrama -->
+  <div class="flex justify-center space-x-4">
+    <v-click>
+      <img src="./recursos/neural-dall·e3.png" class="h-20" alt="Red neuronal según OpenAI model dall·e3" />
+    </v-click>
+  </div>
+
+</div>
+
+
+<style>
+.grid {
+  text-align: center;
+}
+img {
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.1);
+}
+:deep(.mermaid rect) {
+  fill: #F0F4F8;
+  stroke: #1E3A8A;
+  transition: all 0.3s ease;
+}
+
+:deep(.mermaid-node-active) {
+  filter: drop-shadow(0 0 8px #3B82F6);
+}
+</style>
+
+<!--
+Un modelo de IA generativa es el producto de un proceso de entrenamiento en el que se le ha enseñado a un modelo a generar contenido nuevo, como texto,
+imágenes o música, a partir de patrones aprendidos en datos existentes. Estos modelos son capaces de crear **contenido original y creativo**, lo que los
+hace útiles en una variedad de aplicaciones, desde la generación de arte hasta la escritura automática.
+
+Flujo:
+1. gran cantidad de datos diversos
+2. deep learning
+3. Modelo Fundacional (sabe de linguística, arquitectura, código, matemáticas...) – esto es una simplificación, podría ser un modelo de IA generativa entrenado en un dominio específico.
+4. Generación de contenido nuevo (texto, imágenes, música, etc.) a partir de patrones aprendidos en los datos (su manera de pensar) y nueva información (ventana de contexto).
+
+Al final, un FM, es un modelo de IA generativa que tiene multiples sombreros y maneras de pensar.
+-->
+---
+class: text-center
 transition: slide-down
 ---
 
@@ -202,7 +286,7 @@ transition: slide-down
 ¿Clasificaciones?¿Cuántos conocéis?
 
 <div v-click>
-```mermaid {theme: 'neutral', alt: 'Taxonomía basada en arquitectura', scale: 0.8}
+```mermaid {theme: 'default', alt: 'Taxonomía basada en arquitectura', scale: 0.8}
 graph TD
 A[Algunos tipos de GenAI] --> B[GANs]
 A --> C[VAEs]
@@ -223,7 +307,6 @@ A --> F[Flow]
 | Multimodal | Cualquier formato | Educación interactiva, videojuegos |
 
 </div>
-
 <!--
 Hay múltiples taxonomías.
 
@@ -234,7 +317,6 @@ La primera que mostramos es en base a su arquitectura, y la segunda es dependien
 - Diffusion -> De imagen borrosa a resultado nítido (o viceversa).
 - Flow -> transformaciones reversibles desde números aleatorios.
 - Faltan muchos tipos más: Autorregresivos, energéticos, y claro, híbridos.
-
 -->
 
 ---
