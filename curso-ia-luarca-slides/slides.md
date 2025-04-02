@@ -225,6 +225,10 @@ A --> F[Flow]
 </div>
 
 <!--
+Hay múltiples taxonomías.
+
+La primera que mostramos es en base a su arquitectura, y la segunda es dependiendo del tipo de entrada y salida.
+
 - Generative Adversarial Networks -> Dos sistemas rivales, uno genera contenido y otro lo evalúa para detectar si es real o artificial. Ej: Artista y crítico de arte.
 - Variational Autoencoders -> Comprinen información y la regeneran con variaciones. Ej: Resumen de docuemntos.
 - Diffusion -> De imagen borrosa a resultado nítido (o viceversa).
