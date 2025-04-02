@@ -205,18 +205,18 @@ GenAI
   <!-- Fila superior: Imágenes encima de "Datos diversos" -->
   <div class="flex justify-center space-x-4">
     <v-click>
-      <img src="./recursos/Chomsky.png" class="h-20" alt="Chomsky" />
+      <img src="./recursos/Chomsky.png" class="h-20 absolute translate-x-[45px]" style="top:28%; left:2%;" alt="Chomsky" />
     </v-click>
     <v-click>
-      <img src="./recursos/euclidean-vector.jpg" class="h-20" alt="Maths" />
+      <img src="./recursos/euclidean-vector.jpg" class="h-20 absolute translate-x-[45px]" style="top:25%; left:10%;" alt="Maths" />
     </v-click>
     <v-click>
-      <img src="./recursos/vecteezy-science.jpg" class="h-20" alt="https://www.vecteezy.com/free-vector/isolated" />
+      <img src="./recursos/vecteezy-science.jpg" class="h-20 absolute translate-x-[45px]" style="top:10%; left:5%;" alt="https://www.vecteezy.com/free-vector/isolated" />
     </v-click>
   </div>
 
   <!-- Fila central: Diagrama Mermaid -->
-<div>
+
 ```mermaid {theme: 'default', alt: 'Construcción de Modelo Fundacional', scale: 0.60}
   flowchart LR
   A[Recolección\nde Datos]:::blue --> B{{Identificación\nde Patrones}}:::cyan
@@ -230,12 +230,11 @@ GenAI
   classDef lime fill:#8BC34A,color:white
   classDef yellow fill:#FFEB3B,color:black
 ```
-</div>
 
   <!-- Fila inferior: Imágenes debajo del diagrama -->
   <div class="flex justify-center space-x-4">
     <v-click>
-      <img src="./recursos/neural-dall·e3.png" class="h-20" alt="Red neuronal según OpenAI model dall·e3" />
+      <img src="./recursos/neural-dall·e3.png" class="h-20" alt="Red neuronal según OpenAI model dall·e3"/>
     </v-click>
   </div>
 
