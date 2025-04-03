@@ -11,7 +11,7 @@ class: px-20
       icon="././recursos/icon/systemIcon.svg"
       :click-step="1"
     >
-      Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span   v-mark.underline.orange=3>Diseña y expón tres niveles de andamiaje para la siguiente tarea formativa</span>:
+      Eres un <span v-mark.underline.orange=2>experto pedagogo</span> en lengua castellana para estudiantes de ESO españoles. <span v-mark.underline.orange=3>Diseña y expón tres niveles de andamiaje para la siguiente tarea formativa</span>:
     </MessageBox>
     <MessageBox 
       type="user" 
@@ -299,25 +299,92 @@ class: text-sm
 # Unidades de información o *"tokens"*
 ¿Cómo sabe un LLM qué debe generar para un contexto dado?
 
-> **≪La comunicación es un proceso ostensivo-inferencial≫**, ——Dan Sperber y Deirdre Wilson
+> **≪La comunicación es un proceso ostensivo-inferencial≫**, ⸺Dan Sperber y Deirdre Wilson
 
 <br>
 <br>
 
 - Los LLMs procesan la información en unidades de información o *"tokens"*.
 - Reconoce patrones en el contexto dado, e infiere qué unidad de información es más probable que sea la siguiente.
-- Para ello transforma los tokens en vectores, que representan la carga semántica del token en $\N$ dimensiones.
+- Para ello <span v-mark.red>transforma los tokens en vectores</span>, que representan la carga semántica del token en $\N$ dimensiones.
 - La inferencia consiste en predecir la siguiente unidad de información.
 
-<iframe src="https://agents-course-decoding-visualizer.hf.space" frameborder="0" width="850" height="350" ></iframe>
-
----
-transition: slide-dwon
----
-# ¿Cómo les damos instrucciones?
-Estrategias de prompting y modelos con razonamiento integrado.
-WIP
+<iframe v-click="2" src="https://agents-course-decoding-visualizer.hf.space" frameborder="0" width="850" height="350" ></iframe>
 
 <!--
-Esto continúa el ejemplo con deepseek viendo el thinkingy como se está dando prompts a si mismo el modelo.
+Un mapa vectorial de N dimensiones nos da la distancia relativa entre las distintas unidades de datos dependiendo de sus dimensiones semánticas.
+
+Un ejemplo "tonto", podría ser el mapa vectorial de un super mercado, donde hay una dimensión para las categorías de producto, otra para su empaquetado, etc...
+De manera que la palabra que representa al huevo, porque tiene su carga semántica: huevo, está relativamente más cerca de la leche que de la carne, porque ambos comparten la dimensión desayuno (por ejemplo, y entre otras)
 -->
+
+
+---
+transition: slide-down
+---
+# ¿Cómo les damos instrucciones?
+Estrategias de prompting y modelos con razonamiento integrado
+
+<div class= "slide">
+  <div class="top-section">
+    <MessageBox 
+      type="user" 
+      title="Ejemplo de *prompt* completo" 
+      icon="././recursos/icon/userIcon.svg"
+      :click-step="1"
+      >
+      Actúa como  <span v-mark.underline.orange="2">un profesor de secundaria especializado en ciencias sociales</span>. 
+      <span v-mark.underline.green="3">Explica</span> en no más de <span v-mark.underline.green="3">200 palabras</span> 
+      las <span v-mark.underline.green="3">causas principales de la Revolución Industrial</span>, utilizando un <span v-mark.underline.purple="5">lenguaje 
+      accesible</span> para estudiantes de 14 años. <span v-mark.underline.blue="4">Organiza tu respuesta en dos párrafos</span> y utiliza ejemplos históricos.
+    </MessageBox>
+  </div>
+
+  <div class="bottom-section">
+    <ul position="absolute" class="list-disc list-inside text-sm">
+      <li v-click="2"><span v-mark.underline.orange="2"> Orienta a una perspectiva o dominio</span></li>
+      <li v-click="3"><span v-mark.underline.green="3"> Contiene instrucciones específicas</span></li>
+      <li v-click="4"><span v-mark.underline.blue="4"> Define el formato/estructura de la respuesta</span></li>
+      <li v-click="5"><span v-mark.underline.purple="5"> Establece restricciones</span></li>
+      <li v-click="6"> Emplea palabras clave</li>
+      <li v-click="7"> Tan solo faltaría por añadir ejemplos de cómo ha de ser (o no) la respuesta</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.slide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.top-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-section {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+}
+</style>
+
+<!--
+Esto continúa el ejemplo con deepseek viendo el thinking y como se está dando prompts a si mismo el modelo.
+
+Importante NO considerar al prompt de manera aislada, forma parte de una ventana de contexto, y se ha de considerar como un todo.
+Iterando, y mejorando sobre el contexto que le estamos dando al modelo.
+-->
+---
+transition: slide-down
+---
+# Prompts
+Estrategias de prompting y modelos con razonamiento integrado
+
+- **Zero-shot**: No se proporciona información adicional al modelo.
+- **One-shot**: Se proporciona un ejemplo de la tarea a realizar.
+- **Few-shot**: Se proporcionan varios ejemplos de la tarea a realizar.
+- **Chain-of-thought**: Se le pide al modelo que explique su razonamiento paso a paso. Esto está embebido en los modelos de razonamiento como *deepseek r1*.
