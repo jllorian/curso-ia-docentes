@@ -203,22 +203,20 @@ GenAI
 <div class="grid grid-rows-3 gap-4 items-center">
 
   <!-- Fila superior: Imágenes encima de "Datos diversos" -->
-  <div class="flex justify-center space-x-4">
-    <v-click>
-      <img src="./recursos/Chomsky.png" class="h-20 absolute translate-x-[45px]" style="top:28%; left:2%;" alt="Chomsky" />
-      <img src="./recursos/euclidean-vector.jpg" class="h-20 absolute translate-x-[45px]" style="top:25%; left:10%;" alt="Maths" />
-      <img src="./recursos/vecteezy-science.jpg" class="h-20 absolute translate-x-[45px]" style="top:10%; left:5%;" alt="https://www.vecteezy.com/free-vector/isolated" />
-    </v-click>
+  <div v-click="1" class="flex justify-center space-x-4">
+    <img src="./recursos/Chomsky.png" class="h-20 absolute translate-x-[45px]" style="top:28%; left:2%;" alt="Chomsky" />
+    <img src="./recursos/euclidean-vector.jpg" class="h-20 absolute translate-x-[45px]" style="top:25%; left:10%;" alt="Maths" />
+    <img src="./recursos/vecteezy-science.jpg" class="h-20 absolute translate-x-[45px]" style="top:10%; left:5%;" alt="https://www.vecteezy.com/free-vector/isolated" />
   </div>
 
   <!-- Fila central: Diagrama Mermaid -->
 
 ```mermaid {theme: 'default', alt: 'Construcción de Modelo Fundacional', scale: 0.60}
   flowchart LR
-  A[Recolección\nde Datos]:::blue --> B{{Identificación\nde Patrones}}:::cyan
-  B --> C[Creación de Modelo\nFundacional]:::green
-  C --> D[Introducción\nde Nueva\nInformación]:::lime
-  D --> E[Generación\nde Contenido]:::yellow
+  A[Recolección de Datos]:::blue --> B{{Identificación de Patrones}}:::cyan
+  B --> C[Creación de Modelo Fundacional]:::green
+  C --> D[Introducción de Nueva Información]:::lime
+  D --> E[Generación de Contenido]:::yellow
 
   classDef blue fill:#4285F4,color:white
   classDef cyan fill:#00BCD4,color:white
@@ -229,13 +227,28 @@ GenAI
 
   <!-- Fila inferior: Imágenes debajo del diagrama -->
   <div class="flex justify-center space-x-4">
-    <v-click>
+    <div class="absolute" v-click=[2,3]>
       <img src="./recursos/neural-dall·e3.png" class="h-30" alt="Red neuronal según OpenAI model dall·e3"/>
-    </v-click>
+    </div>
+    <div text-align="left" v-click="3">
+      <li>🤓
+      El modelo aprende a <span v-mark.red="4">identificar patrones</span> a partir de datos de múltiples dominios
+      </li>
+      <li>🧐
+      Le mostramos datos que no ha visto antes...
+      </li>
+      <li>🤖
+      Y el modelo <span v-mark.circle.orange="5">infiere</span> de manera creativa
+      </li>
+    </div>
+    <img
+      v-click="5"
+      class="absolute -right-10 w-40"
+      src="./recursos/homer-triangulo.png"
+      alt="Modelo infiriendo (Homer Simpson)"
+    />
   </div>
-
 </div>
-
 
 <style>
 .grid {
@@ -291,15 +304,15 @@ A --> F[Flow]
 ```
 </div>
 
-<div class="text-sm" v-click>
+<div class="text-sm" style="scale:0.85">
 
-| **Tipo de entrada** | **Salida común** | **Aplicaciones típicas** |
-| :-- | :-- | :-- |
-| Texto | Texto, código | Asistentes virtuales, traducción |
-| Texto | Imagen | Diseño gráfico, publicidad |
-| Imagen | Imagen modificada | Edición fotográfica, medicina |
-| Audio | Texto/audio | Transcripción, generación de podcasts |
-| Multimodal | Cualquier formato | Educación interactiva, videojuegos |
+| <div v-click class="text-center">**Tipo de entrada**</div>   | <div v-click class="text-center">**Salida**</div>             |
+| ---------------------------------------- | ----------------------------------------- |
+| <kbd v-click="3">Texto</kbd>             | <div v-click="3">Texto, código, ...</div> |
+| <kbd v-click="3">Texto</kbd>             | <div v-click="3">Imagen</div>             |
+| <kbd v-click="4">Imagen</kbd>            | <div v-click="4">Imagen modificada</div>  |
+| <kbd v-click="5">Audio</kbd>             | <div v-click="5">Texto/audio</div>        |
+| <kbd v-click="6">Multimodal</kbd>        | <div v-click="6">Cualquier formato</div>  |
 
 </div>
 <!--
