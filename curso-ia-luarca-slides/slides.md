@@ -197,7 +197,7 @@ class: text-center
 transition: slide-up
 ---
 
-# Generative AI
+# IA Generativa
 GenAI
 
 <div class="grid grid-rows-3 gap-4 items-center">

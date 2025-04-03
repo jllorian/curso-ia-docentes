@@ -291,3 +291,33 @@ Queries:
 
 Puede dar problemas, estemos listos para saltar a llama3.1
 -->
+
+---
+transition: slide-down
+class: text-sm 
+---
+# Unidades de información o *"tokens"*
+¿Cómo sabe un LLM qué debe generar para un contexto dado?
+
+> **≪La comunicación es un proceso ostensivo-inferencial≫**, ——Dan Sperber y Deirdre Wilson
+
+<br>
+<br>
+
+- Los LLMs procesan la información en unidades de información o *"tokens"*.
+- Reconoce patrones en el contexto dado, e infiere qué unidad de información es más probable que sea la siguiente.
+- Para ello transforma los tokens en vectores, que representan la carga semántica del token en $\N$ dimensiones.
+- La inferencia consiste en predecir la siguiente unidad de información.
+
+<iframe src="https://agents-course-decoding-visualizer.hf.space" frameborder="0" width="850" height="350" ></iframe>
+
+---
+transition: slide-dwon
+---
+# ¿Cómo les damos instrucciones?
+Estrategias de prompting y modelos con razonamiento integrado.
+WIP
+
+<!--
+Esto continúa el ejemplo con deepseek viendo el thinkingy como se está dando prompts a si mismo el modelo.
+-->
