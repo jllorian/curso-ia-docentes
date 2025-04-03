@@ -61,3 +61,14 @@ layout: two-cols
   definition="Son modelos de redes neuronales de aprendizaje profundo entrenados con muchísimos datos, lo que les confiere adaptabilidad para realizar un amplio rango de tareas diferentes dependientes del *prompt* introducido. Ej: GPT-4 sería la base de chatGPT (4-Turbo)."
   source="https://aws.amazon.com/what-is/foundation-models/"
 />
+---
+layout: two-cols
+---
+
+<GlossaryCard
+  term="Token"
+  definition="Un 'token' es la unidad de información con la que trabaja un modelo de lenguaje. Se puede pensar en ellos como 'palabras', pero por razones de eficiencia, los LLMs no usan palabras completas."
+  source="https://huggingface.co/learn/agents-course/unit1/what-are-llms"
+/>
+
+::right::
