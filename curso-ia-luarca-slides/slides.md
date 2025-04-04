@@ -53,7 +53,7 @@ transition: fade-out
 
 
 👋 ¡Hola! Soy un apasionado del **[aprendizaje]{style="color: rgb(44, 145, 179);"}** y la innovación.
-He liderado el desarrollo de sistemas de búsqueda potenciados por IA y chatbots, creando experiencias que combinan tecnología y <span v-mark.circle.orange>creatividad.</span>
+He liderado el desarrollo de sistemas de búsqueda potenciados por IA así como *chatbots*, creando experiencias que combinan tecnología y <span v-mark.circle.orange>creatividad.</span>
 
 <br>
 <br>
@@ -62,9 +62,34 @@ He liderado el desarrollo de sistemas de búsqueda potenciados por IA y chatbots
   ✉️ josellorian@gmail.com | <a href="https://www.linkedin.com/in/llorian">LinkedIn</a>
 </div>
 
+<div v-click="3" class= "credentials-container">
+
+  <a href="https://www.credly.com/badges/88da6527-1f37-41b5-bf4a-ce433e133dfc/public_url" target="_blank">
+    <img
+    src="https://images.credly.com/size/110x110/images/834f2c8d-2d2c-4ce7-9580-02a351c31626/image.png"
+    alt="Credly Badge"
+    style="width: 75px; height: auto;">
+  </a>
+
+  <a href="https://www.credential.net/819ca9ca-d3c5-440f-bc4a-ae59fb56fe21#acc.ymNDFpa1" target="_blank">
+    <img 
+    src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/136142118" 
+    alt="Accredible Badge" 
+    style="width: 75px; height: auto;">
+
+</div>
+
 <div class="slide-counter">
   <SlideCurrentNo />/<SlidesTotal />
 </div>
+
+<style>
+  .credentials-container {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+  }
+</style>
 
 ---
 transition: slide-up
