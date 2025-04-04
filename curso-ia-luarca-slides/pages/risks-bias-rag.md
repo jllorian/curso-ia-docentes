@@ -75,14 +75,27 @@ layout: "image-left"
 image:
 ---
 # Privacidad y seguridad
+Uso responsable de la IA
+
+> No introducir [datos sensibles](definición gdpr) ni [PII](GDPR link too), o información confidencial en un sistema de procesamiento de un proveedor externo no autorizado (o, para simplificar, en la "nube").
 
 ---
 layout: "two-cols"
 ---
-# Retos en la IA y las dimensiones de la IA responsable
+# Retos en GenIA
+Las dimensiones de la IA responsable
+
+
+<h4 v-click="1"> Toxicidad y contenido dañino</h4>
+<h4 v-click="2"> Información sesgada</h4>
+<h4 v-click="3"> Alucinaciones</h4>
+<h4 v-click="4"> Propiedad intelectual</h4>
+<h4 v-click="5"> Plagio y fraude</h4>
+<h4 v-click="6"> Disrupción estructural del trabajo </h4>
+
 
 ::right::
-
+<br>
 <div class="image-container">
     <img src="https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1743804000/InIXiZi6tTNf46TuRw14HQ/tincan/1795780_1731946240_o_1id00k8mrapu1j8e1un5ctcr6nb_zip/assets/Responsible%20AI%20core%20dimensions.png" alt="Retos en la IA y las dimensiones de la IA responsable">
 </div>
