@@ -227,7 +227,7 @@ GenAI
 
   <!-- Fila inferior: Imágenes debajo del diagrama -->
   <div class="flex justify-center space-x-4">
-    <div class="absolute" v-click=[2,3]>
+    <div class="absolute" v-click="[2,3]">
       <img src="./recursos/neural-dall·e3.png" class="h-30" alt="Red neuronal según OpenAI model dall·e3"/>
     </div>
     <div text-align="left" v-click="3">
