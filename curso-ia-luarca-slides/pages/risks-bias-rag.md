@@ -86,11 +86,17 @@ layout: "two-cols"
 Las dimensiones de la IA responsable
 
 
+<br>
 <h4 v-click="1"> Toxicidad y contenido dañino</h4>
+<br>
 <h4 v-click="2"> Información sesgada</h4>
+<br>
 <h4 v-click="3"> Alucinaciones</h4>
+<br>
 <h4 v-click="4"> Propiedad intelectual</h4>
+<br>
 <h4 v-click="5"> Plagio y fraude</h4>
+<br>
 <h4 v-click="6"> Disrupción estructural del trabajo </h4>
 
 
