@@ -5,7 +5,7 @@ background: https://cover.sli.dev
 title: Introducción a la Inteligencia Artificial para Docentes
 info: |
   ## Intruducción a la Inteligencia Artificial para Docentes
-  Presentación desarrollada por [José María Llorián Álvarez](https://www.linkedin.com/in/llorian) para la formación en IA impartida en el IES Carmen y Severo Ochoa el 18 del 2 de 2025.
+  Presentación desarrollada por [José María Llorián Álvarez](https://www.linkedin.com/in/llorian) para la formación en IA impartida en el IES Carmen y Severo Ochoa el 8 de abril de 2025.
 
   Formación propuesta por el Centro del Profesorado y de Recursos de Avilés — Occidente.
 author: José María Llorián Álvarez
@@ -24,7 +24,7 @@ mdc: true
 
 IES Carmen y Severo Ochoa
 
-18 de febrero de 2025
+8 de abril de 2025
 
 <!-- Dar las gracias a todos los participantes por unirse.
 # Antes de comenzar:
