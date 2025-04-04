@@ -329,7 +329,7 @@ Estrategias de prompting y modelos con razonamiento integrado
   <div class="top-section">
     <MessageBox 
       type="user" 
-      title="Ejemplo de *prompt* completo" 
+      title="Ejemplo de prompt completo" 
       icon="././recursos/icon/userIcon.svg"
       :click-step="1"
       >
@@ -384,7 +384,45 @@ transition: slide-down
 # Prompts
 Estrategias de prompting y modelos con razonamiento integrado
 
-- **Zero-shot**: No se proporciona información adicional al modelo.
-- **One-shot**: Se proporciona un ejemplo de la tarea a realizar.
-- **Few-shot**: Se proporcionan varios ejemplos de la tarea a realizar.
-- **Chain-of-thought**: Se le pide al modelo que explique su razonamiento paso a paso. Esto está embebido en los modelos de razonamiento como *deepseek r1*.
+<ul class="list-disc">
+  <li v-click="1">
+    <span v-click="1"><b>Zero-shot:</b></span> 
+    <span v-click="2"> No se proporciona información adicional al modelo.</span>
+  </li>
+  <li v-click="3">
+    <span v-click="3"><b>One-shot:</b></span> 
+    <span v-click="4"> Se proporciona un ejemplo de la tarea a realizar.</span>
+  </li>
+  <li v-click="5">
+    <span v-click="5"><b>Few-shot:</b></span> 
+    <span v-click="6"> Se proporcionan varios ejemplos de la tarea a realizar.</span>
+  </li>
+  <li v-click="7">
+    <span v-click="7"><b>Chain-of-thought:</b></span> 
+    <span v-click="8"> Se le pide al modelo que explique su razonamiento paso a paso. Esto está embebido en los modelos de razonamiento como <i>deepseek r1</i>.</span>
+  </li>
+</ul>
+
+<div class="image-container">
+  <img
+    v-click="2"
+    class="rounded"
+    src="https://media1.tenor.com/m/a1nJT1kc6n0AAAAC/thinking-homer.gif"
+    alt="LLM processing the context window"
+  />
+</div>
+
+<style>
+  .image-container {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 1rem;
+  }
+
+  .img.rounded {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+</style>
