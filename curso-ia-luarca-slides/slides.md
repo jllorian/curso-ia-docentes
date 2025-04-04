@@ -5,7 +5,7 @@ background: https://cover.sli.dev
 title: Introducción a la Inteligencia Artificial para Docentes
 info: |
   ## Intruducción a la Inteligencia Artificial para Docentes
-  Presentación desarrollada por [José María Llorián Álvarez](https://www.linkedin.com/in/llorian) para la formación en IA impartida en el IES Carmen y Severo Ochoa el 18 del 2 de 2025.
+  Presentación desarrollada por [José María Llorián Álvarez](https://www.linkedin.com/in/llorian) para la formación en IA impartida en el IES Carmen y Severo Ochoa el 8 de abril de 2025.
 
   Formación propuesta por el Centro del Profesorado y de Recursos de Avilés — Occidente.
 author: José María Llorián Álvarez
@@ -24,7 +24,7 @@ mdc: true
 
 IES Carmen y Severo Ochoa
 
-18 de febrero de 2025
+8 de abril de 2025
 
 <!-- Dar las gracias a todos los participantes por unirse.
 # Antes de comenzar:
@@ -53,18 +53,46 @@ transition: fade-out
 
 
 👋 ¡Hola! Soy un apasionado del **[aprendizaje]{style="color: rgb(44, 145, 179);"}** y la innovación.
-He liderado el desarrollo de sistemas de búsqueda potenciados por IA y chatbots, creando experiencias que combinan tecnología y <span v-mark.circle.orange>creatividad.</span>
+He liderado el desarrollo de sistemas de búsqueda potenciados por IA así como *chatbots*, creando experiencias que combinan tecnología y <span v-mark.circle.orange>creatividad.</span>
 
-<br>
 <br>
 <div v-click="3">
   📍 Navia, Asturias, España  
   ✉️ josellorian@gmail.com | <a href="https://www.linkedin.com/in/llorian">LinkedIn</a>
 </div>
 
+<div v-click="3" class= "credentials-container">
+
+  <a href="https://www.credly.com/badges/88da6527-1f37-41b5-bf4a-ce433e133dfc/public_url" 
+    target="_blank" 
+    style="text-decoration: none;">
+    <img
+    src="https://images.credly.com/size/110x110/images/834f2c8d-2d2c-4ce7-9580-02a351c31626/image.png"
+    alt="Credly Badge"
+    style="width: 75px; height: auto;">
+  </a>
+
+  <a href="https://www.credential.net/819ca9ca-d3c5-440f-bc4a-ae59fb56fe21#acc.ymNDFpa1" 
+    target="_blank" 
+    style="text-decoration: none;">
+    <img 
+    src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/136142118" 
+    alt="Accredible Badge" 
+    style="width: 75px; height: auto;">
+  </a>
+</div>
+
 <div class="slide-counter">
   <SlideCurrentNo />/<SlidesTotal />
 </div>
+
+<style>
+  .credentials-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+</style>
 
 ---
 transition: slide-up
