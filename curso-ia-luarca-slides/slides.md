@@ -162,8 +162,26 @@ h1 {
   color: #ffffff !important;
 }
 </style>
-<!-- Esta slide muestra las ventajas del uso de la IA en educación. Pero de todo tipo de IA, como se verá más adelante, esta formación se enfoca en el uso de IA generativa.
- -->
+
+<!--
+Esta slide muestra las ventajas del uso de la IA en educación.
+Pero de todo tipo de IA, como se verá más adelante, esta formación se enfoca en el uso de IA generativa.
+
+- Aprendizaje personalizado: La IA puede adaptar el contenido y el ritmo de aprendizaje a las necesidades
+  individuales de cada estudiante, lo que permite una educación más personalizada y efectiva. Más adelante, 
+  veremos cómo podemos construir andamiaje para apoyar a nuestros alumnado de manera personalizada.
+
+- Automatización de tareas: La IA puede ayudar a los docentes a automatizar tareas administrativas y repetitivas,
+  como la corrección de exámenes o la gestión de horarios, lo que les permite centrarse en la enseñanza y el 
+  aprendizaje. Más adelante veremos cómo podemos usar la IA para generar materiales educativos.
+
+- Inclusión educativa: La IA puede facilitar la inclusión de estudiantes con necesidades especiales al ofrecer
+  herramientas y recursos adaptados a sus necesidades. Más adelante veremos cómo podemos usar la IA para 
+  generar materiales educativos adaptados a la diversidad del alumnado.
+
+El contenido de esta slide y la descripción para el presentador que la acompañan ha sido generado al 100% por IA.
+-->
+
 ---
 src: ./pages/IA-ML-DL.md
 hide: true
@@ -176,6 +194,98 @@ transition: fade
 ---
 ---
 class: text-center
+transition: slide-up
+---
+
+# IA Generativa
+GenAI
+
+<div class="grid grid-rows-3 gap-4 items-center">
+
+  <!-- Fila superior: Imágenes encima de "Datos diversos" -->
+  <div v-click="1" class="flex justify-center space-x-4">
+    <img src="./recursos/Chomsky.png" class="h-20 absolute translate-x-[45px]" style="top:28%; left:2%;" alt="Chomsky" />
+    <img src="./recursos/euclidean-vector.jpg" class="h-20 absolute translate-x-[45px]" style="top:25%; left:10%;" alt="Maths" />
+    <img src="./recursos/vecteezy-science.jpg" class="h-20 absolute translate-x-[45px]" style="top:10%; left:5%;" alt="https://www.vecteezy.com/free-vector/isolated" />
+  </div>
+
+  <!-- Fila central: Diagrama Mermaid -->
+
+```mermaid {theme: 'default', alt: 'Construcción de Modelo Fundacional', scale: 0.60}
+  flowchart LR
+  A[Recolección de Datos]:::blue --> B{{Identificación de Patrones}}:::cyan
+  B --> C[Creación de Modelo Fundacional]:::green
+  C --> D[Introducción de Nueva Información]:::lime
+  D --> E[Generación de Contenido]:::yellow
+
+  classDef blue fill:#4285F4,color:white
+  classDef cyan fill:#00BCD4,color:white
+  classDef green fill:#4CAF50,color:white
+  classDef lime fill:#8BC34A,color:white
+  classDef yellow fill:#FFEB3B,color:black
+```
+
+  <!-- Fila inferior: Imágenes debajo del diagrama -->
+  <div class="flex justify-center space-x-4">
+    <div class="absolute" v-click="[2,3]">
+      <img src="./recursos/neural-dall·e3.png" class="h-30" alt="Red neuronal según OpenAI model dall·e3"/>
+    </div>
+    <div text-align="left" v-click="3">
+      <li>🤓
+      El modelo aprende a <span v-mark.red="4">identificar patrones</span> a partir de datos de múltiples dominios
+      </li>
+      <li>🧐
+      Le mostramos datos que no ha visto antes...
+      </li>
+      <li>🤖
+      Y el modelo <span v-mark.circle.orange="5">infiere</span> de manera creativa
+      </li>
+    </div>
+    <img
+      v-click="5"
+      class="absolute -right-10 w-40"
+      src="./recursos/homer-triangulo.png"
+      alt="Modelo infiriendo (Homer Simpson)"
+    />
+  </div>
+</div>
+
+<style>
+.grid {
+  text-align: center;
+}
+img {
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.1);
+}
+:deep(.mermaid rect) {
+  fill: #F0F4F8;
+  stroke: #1E3A8A;
+  transition: all 0.3s ease;
+}
+
+:deep(.mermaid-node-active) {
+  filter: drop-shadow(0 0 8px #3B82F6);
+}
+</style>
+
+<!--
+Un modelo de IA generativa es el producto de un proceso de entrenamiento en el que se le ha enseñado a un modelo a generar contenido nuevo, como texto,
+imágenes o música, a partir de patrones aprendidos en datos existentes. Estos modelos son capaces de crear **contenido original y creativo**, lo que los
+hace útiles en una variedad de aplicaciones, desde la generación de arte hasta la escritura automática.
+
+Flujo:
+1. gran cantidad de datos diversos
+2. deep learning
+3. Modelo Fundacional (sabe de linguística, arquitectura, código, matemáticas...) – esto es una simplificación, podría ser un modelo de IA generativa entrenado en un dominio específico.
+4. Generación de contenido nuevo (texto, imágenes, música, etc.) a partir de patrones aprendidos en los datos (su manera de pensar) y nueva información (ventana de contexto).
+
+Al final, un FM, es un modelo de IA generativa que tiene multiples sombreros y maneras de pensar.
+-->
+---
+class: text-center
 transition: slide-down
 ---
 
@@ -184,7 +294,7 @@ transition: slide-down
 ¿Clasificaciones?¿Cuántos conocéis?
 
 <div v-click>
-```mermaid {theme: 'neutral', alt: 'Taxonomía basada en arquitectura', scale: 0.8}
+```mermaid {theme: 'default', alt: 'Taxonomía basada en arquitectura', scale: 0.8}
 graph TD
 A[Algunos tipos de GenAI] --> B[GANs]
 A --> C[VAEs]
@@ -194,25 +304,27 @@ A --> F[Flow]
 ```
 </div>
 
-<div class="text-sm" v-click>
+<div class="text-sm" style="scale:0.85">
 
-| **Tipo de entrada** | **Salida común** | **Aplicaciones típicas** |
-| :-- | :-- | :-- |
-| Texto | Texto, código | Asistentes virtuales, traducción |
-| Texto | Imagen | Diseño gráfico, publicidad |
-| Imagen | Imagen modificada | Edición fotográfica, medicina |
-| Audio | Texto/audio | Transcripción, generación de podcasts |
-| Multimodal | Cualquier formato | Educación interactiva, videojuegos |
+| <div v-click class="text-center">**Tipo de entrada**</div>   | <div v-click class="text-center">**Salida**</div>             |
+| ---------------------------------------- | ----------------------------------------- |
+| <kbd v-click="3">Texto</kbd>             | <div v-click="3">Texto, código, ...</div> |
+| <kbd v-click="3">Texto</kbd>             | <div v-click="3">Imagen</div>             |
+| <kbd v-click="4">Imagen</kbd>            | <div v-click="4">Imagen modificada</div>  |
+| <kbd v-click="5">Audio</kbd>             | <div v-click="5">Texto/audio</div>        |
+| <kbd v-click="6">Multimodal</kbd>        | <div v-click="6">Cualquier formato</div>  |
 
 </div>
-
 <!--
+Hay múltiples taxonomías.
+
+La primera que mostramos es en base a su arquitectura, y la segunda es dependiendo del tipo de entrada y salida.
+
 - Generative Adversarial Networks -> Dos sistemas rivales, uno genera contenido y otro lo evalúa para detectar si es real o artificial. Ej: Artista y crítico de arte.
 - Variational Autoencoders -> Comprinen información y la regeneran con variaciones. Ej: Resumen de docuemntos.
 - Diffusion -> De imagen borrosa a resultado nítido (o viceversa).
 - Flow -> transformaciones reversibles desde números aleatorios.
 - Faltan muchos tipos más: Autorregresivos, energéticos, y claro, híbridos.
-
 -->
 
 ---
