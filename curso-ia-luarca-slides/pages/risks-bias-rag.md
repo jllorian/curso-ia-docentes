@@ -26,6 +26,21 @@ versus la *interpretabilidad* y el **sesgo** y la **varianza**
 
 ::right::
 
+<div class= "text-container">
+    <p v-click="1" class="text-container_traning_data">
+        Datos de entrenamiento <span style="color: rgb(44, 145, 179);">desconocidos</span>
+    </p>
+    <p v-click="2" class="text-container_traning">
+        Proceso de entrenamiento <span style="color: rgb(44, 145, 179);">desconocidos</span>
+    </p>
+    <p v-click="3" class="text-container_inference">
+        Proceso de inferencia <span style="color: rgb(44, 145, 179);">opaco</span>
+    </p>
+</div>
+<br>
+<div v-click="2" class="image-container">
+    <img src="../recursos/bias-variance.png" alt="Riesgos y sesgos">
+</div>
 
 
 <!--
@@ -34,12 +49,25 @@ versus la *interpretabilidad* y el **sesgo** y la **varianza**
 # Proceso de entrenamiento desconocido
     No sabemos cómo han distribuido los pesos, que *features* han utilizado, etc.
 # Proceso de inferencia opaco
-    No sabemos cómo se efectua el proceso de inferencia, ni los patrones que se seleccionan en las redes neuronales del modelo.
+    No sabemos cómo se efectúa el proceso de inferencia, ni los patrones que se seleccionan en las redes neuronales del modelo.
 
 La inferencia forma parte de un proceso en el que la IA analiza datos que no ha visto antes. Pero
 se puede dar el caso de que la IA sí haya visto antes los datos que le mostramos. Estaríamos ante
-una potencial situación de overfitting, donde el modelo ha aprendido a memorizar los datos de entrenamiento en lugar de generalizar patrones.
+una potencial situación de *overfitting*, donde el modelo ha aprendido a memorizar los datos de entrenamiento en lugar de generalizar patrones.
 Esto puede llevar a resultados inesperados o erróneos.
+
+Varianza ≈ ruido en los datos
+Sesgo ≈ error sistemático en los datos
+
+**Interpretability** is a feature of model transparency. Interpretability is the degree to which a human can understand the cause of a decision.
+**Interpretability** is the access into a system so that a human can interpret the model’s output based on the weights and features.
+
+
+**Explainability** is how to take an ML model and explain the behavior in human terms. With complex models (for example, black boxes), 
+you cannot fully understand how and why the inner mechanics impact the prediction. However, through model agnostic methods (for example, partial dependence plots, 
+SHAP dependence plots, or surrogate models) you can discover meaning between input data attributions and model outputs. With that understanding, 
+you can explain the nature and behavior of the AI/ML model.
+
 -->
 
 ---
@@ -49,9 +77,15 @@ image:
 # Privacidad y seguridad
 
 ---
-layout:
+layout: "two-cols"
 ---
 # Retos en la IA y las dimensiones de la IA responsable
+
+::right::
+
+<div class="image-container">
+    <img src="https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1743804000/InIXiZi6tTNf46TuRw14HQ/tincan/1795780_1731946240_o_1id00k8mrapu1j8e1un5ctcr6nb_zip/assets/Responsible%20AI%20core%20dimensions.png" alt="Retos en la IA y las dimensiones de la IA responsable">
+</div>
 
 ---
 layout: "center"
