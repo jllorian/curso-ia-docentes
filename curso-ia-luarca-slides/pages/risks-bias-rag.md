@@ -72,7 +72,7 @@ you can explain the nature and behavior of the AI/ML model.
 
 ---
 layout: "image-left"
-image:
+image: "../recursos/privacy-dall·3.png"
 ---
 # Privacidad y seguridad
 Uso responsable de la IA
@@ -88,6 +88,20 @@ Uso responsable de la IA
         target="_blank">IAPP</a> 
         como fuente fiable para explorar mejores prácticas en privacidad</p>
 </div>
+
+<br>
+
+<ul class="can">
+    <li v-click="1" class="check">Crear materiales didácticos</li>
+    <li v-click="3" class="check">Buscar ideas creativas para la clase</li>
+    <li v-click="4" class="check">Generar y diseñar contenido</li>
+</ul>
+
+<ul class="no-can">
+    <li v-click="2" class="cross">Adaptaciones basadas en datos personales</li>
+    <li v-click="5" class="cross">Generar contenido basado en datos personales</li>
+
+</ul>
 
 <style>
 .iapp-container {
@@ -106,6 +120,28 @@ Uso responsable de la IA
 .iapp-text {
     font-size: 0.7em;
     color: #aaa;
+}
+.can{
+    list-style: none;
+    padding-left: 0;
+}
+.can li.check::before {
+    content: "✅";
+    font-size: 0.7em;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    margin-right: 15px;
+}
+.no-can{
+    list-style: none;
+    padding-left: 0;
+}
+.no-can li.cross::before {
+    content: "❌";
+    font-size: 0.7em;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    margin-right: 15px;
 }
 </style>
 
@@ -188,3 +224,28 @@ Generación a partir de información externa
     height: 100%;
 }
 </style>
+---
+layout: "two-cols"
+image: " "
+class: "text-sm"
+---
+# Empleemos la recuperación aumentada para hacer andamiaje
+Introduciendo en la ventana de contexto el material didáctico que queremos usar de base,
+y pidiéndole al modelo que de **atención** a la normativa aplicable.
+
+Haremos dos [ejemplos]():
+- Empleando una herramienta proveedor de IA generativa en cloud.
+- Empleando una herramienta de IA generativa en local: [Msty](https://msty.app/)^[TOS de la licencia gratuita de Msty no permiten su uso comercial]
+
+::right::
+[Le Chat](https://chat.mistral.ai/), [Gemini](https://gemini.google.com), o [chatGPT](https://chat.openai.com/) nos permiten que el modelo
+recupere información de internet para enriquecer su ventana de contexto, así como adjuntar documentos o archivos de texto.
+
+Para el ejemplo "en cloud" usaremos de nuevo [Perplexity](https://www.perplexity.ai/), que nos permite una demostración más granular.
+
+<!--
+Gemini no nos permite controlar si usa el internet como data-store.
+
+Anthropic a lanzado un modelo de Claude para la educación (universitaria en USA, UK, y Canada) para fomentar
+un uso que haga incapié en el pensamiento crítico.
+-->
