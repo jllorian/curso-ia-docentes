@@ -239,7 +239,8 @@ Haremos dos [ejemplos]():
 
 ::right::
 [Le Chat](https://chat.mistral.ai/), [Gemini](https://gemini.google.com), o [chatGPT](https://chat.openai.com/) nos permiten que el modelo
-recupere información de internet para enriquecer su ventana de contexto, así como adjuntar documentos o archivos de texto.
+recupere información de internet para enriquecer su **[ventana de contexto]{style="color: rgb(44, 145, 179);"}**, así como adjuntar documentos potencialmente relevantes para su inclusión en
+el contexto.
 
 Para el ejemplo "en cloud" usaremos de nuevo [Perplexity](https://www.perplexity.ai/), que nos permite una demostración más granular.
 
