@@ -77,7 +77,49 @@ image:
 # Privacidad y seguridad
 Uso responsable de la IA
 
-> No introducir [datos sensibles](definición gdpr) ni [PII](GDPR link too), o información confidencial en un sistema de procesamiento de un proveedor externo no autorizado (o, para simplificar, en la "nube").
+> No introducir **datos** ([personales](https://gdpr-info.eu/art-5-gdpr/)) **[sensibles](https://gdpr-info.eu/art-9-gdpr/)** 
+> ni *[PII](https://gdpr-info.eu/art-4-gdpr/)*, o **información confidencial** en un sistema de procesamiento de un proveedor no autorizados 
+> expresamente ni que incumplan las normativas de RGPD o los principios éticos de la Consejería y vuestro centro.
+
+<div class="iapp-container">
+    <img src="https://iapp.org/wp-content/themes/iapp/static/img/iapp25_logo.svg" alt="Logo IAPP" class="iapp-logo" />
+    <p class="iapp-text">
+        <a href="https://iapp.org/" 
+        target="_blank">IAPP</a> 
+        como fuente fiable para explorar mejores prácticas en privacidad</p>
+</div>
+
+<style>
+.iapp-container {
+    display: flex;    
+    align-items: center;
+    margin-top: auto;
+    position: absolute;
+    bottom: 20px;
+}
+
+.iapp-logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.iapp-text {
+    font-size: 0.7em;
+    color: #aaa;
+}
+</style>
+
+<!--
+Uso PII en vez de datos personales (como se refiere a estos en el RGPD) porque es un término más comúnmente usado.
+
+A fecha de hacer esta diapositiva, no he encontrado información que indique que la Consejería de Educación de Asturias
+haya dado autorización expresa para emplear Microsoft Copilot a pesar de que Microsoft es proveedor de Office 365 para 
+la consejería.
+
+Entiendo que la autorización expresa por la Consejería de Educación de Asturias implica que se ha informado a los 
+*data owners* de cómo y con qué finalidad se van a usar sus datos, y que se ha recogido un consentimiento expreso. Así 
+mismo, se han cumplido con todos los requisitos legales de nuestra jurisdicción.
+-->
 
 ---
 layout: "two-cols"
