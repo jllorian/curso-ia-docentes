@@ -233,7 +233,7 @@ class: "text-sm"
 Introduciendo en la ventana de contexto el material didáctico que queremos usar de base,
 y pidiéndole al modelo que de **atención** a la normativa aplicable.
 
-Haremos dos [ejemplos]():
+Haremos dos [ejemplos](https://github.com/jllorian/curso-ia-docentes/blob/main/examples.md#profesor-de-ingl%C3%A9s-de-1%C2%BA-de-bachillerato):
 - Empleando una herramienta proveedor de IA generativa en cloud.
 - Empleando una herramienta de IA generativa en local: [Msty](https://msty.app/)^[TOS de la licencia gratuita de Msty no permiten su uso comercial]
 
