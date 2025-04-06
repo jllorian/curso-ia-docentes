@@ -368,3 +368,52 @@ transition: slide-left
 src: ./pages/glosario.md
 transition: slide-left
 ---
+---
+layout: "default"
+class: text-center
+transition: slide-up
+---
+# El ~~futuro~~ presente de la IA
+Agentes
+
+
+---
+layout: "end"
+class: text-center
+transition: slide-up
+---
+
+# ¡Gracias por vuestra atención!
+
+<br>
+
+![qr para la presentación](../recursos/QR.png)
+
+<br>
+
+[Enlace al repositorio de github](https://github.com/jllorian/curso-ia-docentes)
+
+<style>
+a {
+  color: #4EC5D4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2B90B6;
+}
+
+img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #4EC5D4;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slidev-layout {
+  background-color:rgb(255, 255, 255) !important;
+}
+</style>

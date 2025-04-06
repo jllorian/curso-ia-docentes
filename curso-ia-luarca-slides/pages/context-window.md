@@ -16,7 +16,7 @@ class: px-20
     <MessageBox 
       type="user" 
       title="Mensaje del usuario" 
-      icon="../recursos/icon/userIcon.svg"
+      icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/2e204c072de6d543f1f6a3d1274e2d7d1b072fcc/curso-ia-luarca-slides/recursos/icon/userIcon.svg"
       :click-step="5"
     >
       "Periodistas por un día" Los estudiantes asumen el rol de periodistas para crear un reportaje sobre las variedades lingüísticas de  su ...
@@ -27,7 +27,7 @@ class: px-20
 <MessageBox 
   type="ai" 
   title="Mensaje de la IA" 
-  icon="../recursos/icon/iaIcon.svg"
+  icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/2e204c072de6d543f1f6a3d1274e2d7d1b072fcc/curso-ia-luarca-slides/recursos/icon/iaIcon.svg"
   :click-step="7"
   is-code
 >
@@ -144,21 +144,21 @@ transition: slide-right
       <MessageBox 
         type="system" 
         title="Mensaje del sistema" 
-        icon="../recursos/icon/systemIcon.svg"
+        icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/e074b4fc3b23a3dd124c91c19a1d3378fca128af/curso-ia-luarca-slides/recursos/icon/systemIcon.svg"
         :click-step="1"
       >
       </MessageBox>
       <MessageBox 
         type="user" 
         title="Mensaje del usuario" 
-        icon="../recursos/icon/userIcon.svg"
+        icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/2e204c072de6d543f1f6a3d1274e2d7d1b072fcc/curso-ia-luarca-slides/recursos/icon/userIcon.svg"
         :click-step="1"
       >
       </MessageBox>
       <MessageBox 
         type="ai" 
         title="Mensaje de la IA" 
-        icon="../recursos/icon/iaIcon.svg"
+        icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/2e204c072de6d543f1f6a3d1274e2d7d1b072fcc/curso-ia-luarca-slides/recursos/icon/iaIcon.svg"
         :click-step="1"
       >
       </MessageBox>
@@ -167,7 +167,7 @@ transition: slide-right
   <MessageBox 
     type="user" 
     title="Mensaje del usuario" 
-    icon="../recursos/icon/userIcon.svg"
+    icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/2e204c072de6d543f1f6a3d1274e2d7d1b072fcc/curso-ia-luarca-slides/recursos/icon/userIcon.svg"
     :click-step="2"
     >
   </MessageBox>
@@ -177,7 +177,7 @@ transition: slide-right
 <MessageBox
   type="ai" 
   title="Mensaje de la IA" 
-  icon="../recursos/icon/iaIcon.svg"
+  icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/2e204c072de6d543f1f6a3d1274e2d7d1b072fcc/curso-ia-luarca-slides/recursos/icon/iaIcon.svg"
   :click-step="3"
   is-code
 >Este contenido ha sido inferido a partir de la "información nueva" que se ha mostrado al modelo en la ventana de contexto.
@@ -330,7 +330,7 @@ Estrategias de prompting y modelos con razonamiento integrado
     <MessageBox 
       type="user" 
       title="Ejemplo de prompt completo" 
-      icon="../recursos/icon/userIcon.svg"
+      icon="https://raw.githubusercontent.com/jllorian/curso-ia-docentes/2e204c072de6d543f1f6a3d1274e2d7d1b072fcc/curso-ia-luarca-slides/recursos/icon/userIcon.svg"
       :click-step="1"
       >
       Actúa como  <span v-mark.underline.orange="2">un profesor de secundaria especializado en ciencias sociales</span>. 
