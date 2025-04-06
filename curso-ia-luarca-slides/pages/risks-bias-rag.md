@@ -244,6 +244,14 @@ el contexto.
 
 Para el ejemplo "en cloud" usaremos de nuevo [Perplexity](https://www.perplexity.ai/), que nos permite una demostración más granular.
 
+<hr>
+<br>
+
+> El gran beneficio de usar un sistema con recuperación aumentada en local, es introducir materiales que no queremos que salgan de nuestro entorno de control, 
+> y [poder trabajar]^[Esto no exime de cumplir con la RGPD: Consentimiento explícito, Principio de finalidad, Minimización de datos, Responsabilidad Activa...] con información sensible sin facilitársela a terceros.
+
+[Anonimización y pseudonimización](https://iapp.org/news/a/looking-to-comply-with-gdpr-heres-a-primer-on-anonymization-and-pseudonymization)
+
 <!--
 Gemini no nos permite controlar si usa el internet como data-store.
 
