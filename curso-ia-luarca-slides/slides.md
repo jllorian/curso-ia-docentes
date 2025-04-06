@@ -387,7 +387,7 @@ transition: slide-up
 
 <br>
 
-![qr para la presentación](../recursos/QR.png)
+![qr para la presentación](./recursos/QR.png)
 
 <br>
 
