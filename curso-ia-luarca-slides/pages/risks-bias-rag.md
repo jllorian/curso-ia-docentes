@@ -72,7 +72,7 @@ you can explain the nature and behavior of the AI/ML model.
 
 ---
 layout: "image-left"
-image: "../recursos/privacy-dalle3.png"
+image: "https://github.com/jllorian/curso-ia-docentes/blob/main/curso-ia-luarca-slides/recursos/privacy-dalle3.png?raw=true"
 ---
 # Privacidad y seguridad
 Uso responsable de la IA
