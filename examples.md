@@ -157,7 +157,7 @@ No, no has identificado tu nombre como José, pero entiendo que lo has mencionad
 > En este ejemplo, vamos a hacer uso de nuevo de los espacios. En esta ocasión, vamos a cargar en el espacio **algunos** de los links y documentos que queremos que use 
 > como base para generar el contenido..
 
-Podémos ver este espacio y ejemplo [aquí](https://www.perplexity.ai/search/sabiendo-que-tenemos-4-horas-a-hNCJaPs4R5Wnz8plB4i9UA)
+Podemos ver este espacio y ejemplo [aquí](https://www.perplexity.ai/search/sabiendo-que-tenemos-4-horas-a-hNCJaPs4R5Wnz8plB4i9UA)
 
 Files:
 1. [Programación Didáctica Lengua 24-25 Extranjera: Inglés](https://educastur-my.sharepoint.com/personal/carmenys_educastur_org/_layouts/15/onedrive.aspx?ga=1&id=/personal/carmenys_educastur_org/Documents/web%20ies%20p%C3%BAblico/PROGRAMACIONES/INGL%C3%89S/PD_1_%20BACH_INGL%C3%89S.pdf&parent=/personal/carmenys_educastur_org/Documents/web%20ies%20p%C3%BAblico/PROGRAMACIONES/INGL%C3%89S)
