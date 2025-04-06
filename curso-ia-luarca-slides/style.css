@@ -8,3 +8,11 @@
   right: 10px;
   font-size: 0.8em;
 }
+
+.footnotes {
+  position: absolute;
+  font-size: 10px;
+  color: gray;
+  bottom: 20px;
+  text-align: left;
+}
