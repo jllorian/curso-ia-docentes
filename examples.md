@@ -164,7 +164,7 @@ Files:
 Links:
 1. https://iesdeluarca.es/
 
-Haremos que la plataforma recupere el contenido de los textos leages y/o de la Consejería a través de internet.
+Haremos que la plataforma recupere el contenido de los textos legales y/o de la Consejería a través de internet.
 
 SYSTEM_MESSAGE="""
 Eres profesor de Inglés para alumnos de 1º de Bachillerato en el Instituto (IES) Carmen y Severo Ochoa, Luarca, Asturias.
@@ -488,3 +488,361 @@ Para facilitar el aprendizaje progresivo:
 
 Esta actividad combina aprendizaje lúdico e interacción oral, fomentando tanto el uso del inglés como la colaboración entre los estudiantes mientras adquieren vocabulario técnico esencial para la unidad "TECH TIME".
 """
+
+# Ejemplo en local: Profesor 2º Bachiller Tecnologías Digitales Aplicadas II
+
+Este ejemplo se inspira en el curso [AI Agents in LangGraph de DeepLearning.AI](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/).
+[Esta libreta de colab](https://colab.research.google.com/drive/1Lcc7fe8dx2LaXMuNCkge98XqlyT4gwp0#scrollTo=JxJ7d58rpLpq) muestra el output deseado.
+
+Pasos a seguir:
+1. Hacer un "store" de vectores:
+  1. Descargar los siguientes archivos:
+    1. [Programación Didáctica Tecnologías digitales aplicadas II](https://educastur-my.sharepoint.com/personal/carmenys_educastur_org/_layouts/15/onedrive.aspx?id=/personal/carmenys_educastur_org/Documents/web%20ies%20p%C3%BAblico/PROGRAMACIONES/TECNOLOG%C3%8DA&ga=1)
+    2. [Concreciones ESO y Bachillerato](https://iesdeluarca.es/wp-content/uploads/2024/05/Concreciones-ESO-y-Bachillerato-2.pdf)
+    3. [PEC-IES Carmen y Severo Ochoa](https://iesdeluarca.es/wp-content/uploads/2024/11/PEC-IES-CARMEN-Y-SEVERO-OCHOA.pdf)
+  2. Seleccionar un modelo "encoder" para hacer los vectores (embedings)
+    1. *Opcional*: emplear un sistema de ranking: https://jina.ai/reranker/ tiene opción gratuita para uso no comercial. ¡Esto implica procesamiento no-local de los archivos!
+2. Selecciona un modelo para descargar y usar en local. Nosotros usaremos DeepSeek r1
+3. Preparar el espacio de trabajo:
+  1. Prompt de instrucciones.
+  2. Seleccionar parámetros de inferencia.
+  3. Permitir al sistema recuperar información del "store" de vectores y de internet.
+
+> NOTA: este ejemplo contiene código generado pro deepskeek-r1. No he comprobado sí es correcto o funciona.
+
+**:Model Instructions:** Eres profesor de la materia: Tecnologías Digitales Aplicadas. Tu misión es preparar materiales, con su rúbrica y andamiaje, que se ajusten al Programa Didáctico y al Decreto 59/2022 de Asturias y la LOMLOE.
+
+  ---
+
+  
+**:You:** Prepara y estructura un ejercicio para realizar en el entorno de google colab, cuyo objetivo es que los alumnos hagan un agente tipo ReAct (Reason + Act) usando el framework LangGraph que: (1) Redactor: Planifica el esquema de una redacción, (2) Investigador: Hace búsquedas para informarse sobre el tema usando Tavily, (3)Redactor: Escribe una redacción usando el esquema y las respuestas dadas al Investigador.
+
+Para que el ejercicio tenga éxito, los estudiantes han de:
+1. Identificar las librerías que necesitan e instalarlas en la libreta de jupyter.
+1. Gestionar y almacenar los secretos de HuggingFace y Tavily.
+2. Seleccionar, invocar y cuantizar (quantization) un modelo de su elección de HuggingFace.
+3. Diseñar los nodos que va a tener el agente.
+4. desarrollar la herramienta que va llamar a la API de Tavily
+
+Tu misión NO es generar el código que han de hacer los alumnos, sino preparar las instrucciones, la rúbrica, y el andamiaje de la actividad. Si puedes acompañar las instrucciones para los alumnos con snipets de código de ejemplo.
+
+---
+
+**:deepseek-r1:latest:** ### **Ejercicio para preparar y estructurar un ejercicio en Google Colab: Creación de un agente ReAct usando LangGraph**
+
+#### Objetivo del ejercicio:
+El objetivo es que los estudiantes desarrollen, entrenen y prueben una herramienta integrada que permita la creación de un agente de Reason + Act (ReAct) utilizando el framework LangGraph. El agente debe incluir los siguientes componentes principales:
+1. **Redactor**: Planificará el esquema de una redacción.
+2. **Investigador**: Recogerá información relevante sobre el tema a discutir usando Tavily.
+3. **Redactor**: Escribirá la redacción basándose en los datos recolectados.
+
+---
+
+### **Step-by-step guía para desarrollar el ejercicio:**
+
+#### 1. Preparación del entorno de trabajo
+**Instrucciones para los estudiantes:**
+- Asegúrense de que están trabajando en un entorno de Google Colab.
+- Instalar las librerías necesarias:
+  
+```bash
+pip install transformers tervaly langgraph pyyaml pandas requests numpy scipy
+```
+
+#### 2. Configuración de secretos
+**Instrucciones para los estudiantes:**
+- Seleccionen y guarden sus secretos HuggingFace (llave access) en un archivo .env:
+  
+```bash
+export HUGGINGFACE_TOKEN=my_api_key_here
+export TAvily_SECRET_KEY=your_tvalily_secret_key_here
+```
+- **Nota**: Eviten Exponer secretos de manera pública, como en version control o en repositorios.
+
+#### 3. Descarga y entrenamiento del modelo
+**Instrucciones para los estudiantes:**
+- Seleccionen un modelo preentrenado de HuggingFace utilizando el framework LangGraph.
+  
+Ejemplo (usando EfficientNet-B7):
+
+```python
+from transformers import AutoModelForCausalLM
+
+# Seleccionar un modelo:
+model_name = "google/efficientnet-b7"  # O otro modelo según las necesidades.
+
+with torch.no_grad():
+    model = AutoModelForCausalLM.from_pretrained(model_name, quantization="4bit")
+```
+
+- Realicen la cuantización del modelo para reducir el tamaño:
+
+```python
+model = model.quantize(quantization_bit=4)
+```
+
+#### 4. Diseño de los nodos del agente ReAct
+**Instrucciones para los estudiantes:**
+1. **Definir los esquemas de redacción:**
+   Utilicen PyYAML para definir el esquema estructurado de la redacción.
+
+Ejemplo:
+
+```yaml
+redactor_schema:
+  - nombre_teorico: Teoría Base
+    descripcion: Introducción al tema.
+  
+  - analisis_cognitivo: Análisis Cognitivo
+    descripcion: Identificación de conceptos clave y su relevancia.
+    
+  - analisis_expositivo: Análisis Expositivo
+    descripcion: Desarrollo del contenido estructurado.
+    
+  - conclusiones:
+      descripcion: Resumen y extrapolación de los resultados obtenidos.
+
+- nombre_tematico: Técnica Especifica
+```
+
+2. **Definir las fuentes de información:**
+   Utilicen Tavily para recopilar datos sobre el tema seleccionado.
+
+Ejemplo:
+
+```python
+from tervaly import Avata, API
+
+client = Avata()
+API(client).set_collection("collection_name").add_query("query_string")
+```
+
+3. **Definir la estructura del agente:**
+   Utilicen LangGraph para definir las interacciones entre los componentes.
+
+Ejemplo:
+
+```yaml
+nodes:
+  - Redactor1:
+      type: redactores
+      input_fields: ["introduccion", "conceptos_claves"]
+      output_fields: ["contenido_inicial"]
+
+  - Investigador1:
+      type: investigadores
+      query_template: "¿Cuál es la importancia de {palabra} en el contexto del tema?"
+  
+  - Redactor2:
+      type: redactores
+      input_fields: ["influencias", "resultados"]
+      output_fields: ["conclusiones"]
+```
+
+#### 5. Desarrollo de la herramienta para Tavily
+**Instrucciones para los estudiantes:**
+- Escriban una función que:
+  
+1. Busque información en Tavily.
+2. Recuperen los datos relevantes.
+3. Retorne el resultado.
+
+Ejemplo:
+
+```python
+def tvalily_query(query):
+    client = Avata()
+    API(client).set_collection("collection_name").add_query(query)
+    
+    results = API.get_results().to_dict('records')
+    
+    return results[0]
+```
+
+#### 6. Integramiento del agente en LangGraph
+**Instrucciones para los estudiantes:**
+- Utilicen el framework LangGraph para integrar todos los componentes.
+  
+Ejemplo:
+
+```yaml
+ Redactor:
+   scheme_name: redactor_schema
+   actions:
+      - CallFunction("tvalily_query", "argumentos_de llama")
+```
+
+#### 7. Validación y pruebas del agente
+**Instrucciones para los estudiantes:**
+- **Validar**: Prueben el agente con diferentes inputs y verifiquen si la salida es consistente.
+- **Optimizar**: Ajusten los parámetros del modelo, la estructura de redacción o las fuentes de información según sea necesario.
+
+#### 8. Documentación
+**Instrucciones para los estudiantes:**
+- Escriban un informe detallado que explicará cada etapa del ejercicio.
+- Incluyan:
+  
+1. **Descripción del agente ReAct**: Explicar qué hace el agente y cómo está estructurado.
+2. **Configuración de secretos**: Mostrar los secretos HuggingFace y Tavily utilizados.
+3. **Evolución del código**: Presentar las etapas clave del desarrollo con referencias al código.
+
+#### 9. Evaluación
+**Mejores prácticas para la evaluación:**
+- Evalúen el rendimiento del agente en tareas específicas (por ejemplo, comparando diferentes modelos).
+- Verifique que los estudiantes hayan followado las instrucciones detalladamente.
+- Analízen la eficiencia de su redactor y la precisión de sus investigadores.
+
+### Preguntas y Respuestas
+
+¿Cómo puedo asegurarme de que mi agente ReAct funcione correctamente?
+
+Puedes seguir estos pasos para verificar tu agente:
+
+1. **Validación**: Ejecuta el agente con inputs conocidos y verifica si las salidas esperadas se obtienen.
+
+2. **Análisis de la estructura**: Verifica que los nodos del LangGraph están correctamente configurados y comunican bien entre sí.
+
+3. **Optimización**: Intenta modificar parámetros como la precisión del modelo o el tamaño del esquema de redacción para observar cambios en el rendimiento.
+
+¿Cómo puedo mejorar mi modelo cuantizado?
+
+Puedes mejorar tu modelo cuantizado ejecutando pasos adicionales como:
+
+1. **Tuneo**: Ajusta los parámetros de entrenamiento más finamente.
+2. **Pruebas exhaustivas**: Prueba diferentes combinaciones de inputs para asegurar la consistencia del resultado.
+3. **Validación cruzada**: Utiliza técnicas de validación avanzadas para prevenir el sobreajuste.
+
+¿Cómo puedo integrar mejor con Tavily?
+
+Para mejorar la integración con Tavily, puedes:
+
+1. ** personalizar las rutas de llamada**: Asegúrate de que las funciones de investigación estén correctamente configuradas.
+2. **Validación de datos**: Añade controles para asegurar que los datos devueltos por Tavily sean procesados correctamente.
+
+¿Qué significa cuantizar un modelo en PyTorch?
+
+La cuantización consiste en reducir la precisión numérica del modelo para disminuir su tamaño y mejor adaptación a dispositivos con limitaciones de recursos, como CPUs o arquitecturas móviles. En el caso de 4 bits, cada tensor se representa con 4 bits en lugar de los flotantes precisionales.
+
+¿Cómo puedo manejar excepciones en PyTorch?
+
+PyTorch provede una serie de maneras para gestionar excepciones durante el entrenamiento o inferencia del modelo:
+
+1. **Seterramientas de error handling**: Asegúrate de que las configuraciones de error se hagan apropiadas.
+2. **Lotes condicionales**: Utiliza controles del flujo para manejar situaciones críticas como la división por cero o operaciones invariables.
+
+¿Cómo puedo seleccionar un modelo optimo para mi problema?
+
+Algunos factores a considerar al seleccionar un modelo son:
+
+1. **Tamaño de dataset**: Si tienes pocos ejemplos, opta por-modelos más pequeño.
+2. **Complejidad del problema**: Cuanto más difícil es el tema, mayor será la necesidad de un modelo más grande y complejo.
+3. **Recursos disponibles**: Considera el poder de procesamiento y la memoria para seleccionar un tamaño adecuado de modelo.
+
+¿Cómo puedo hacer que mi redactor maneje diferentes tipos de estructuras?
+
+Puedes personalizar los esquemas del agente ReAct para accepts diferentes tipos de datos, asegurando que cada tipo se procese correctamente en su etapa correspondiente.
+</think>
+
+La preparación y ejecución del ejercicio sobre la creación de un agente ReAct utilizando el framework LangGraph implica varias etapas clave. A continuación, se detallan los pasos para each student:
+
+### Preparación del Material Docente
+1. **Ejercicio 1: Configuración inicial**
+   - Seleccionar y definir el esquema de redacción utilizando PyYAML.
+   - Diseñar la estructura de nodos para integrar con Tavily.
+
+2. **Ejercicio 2: Desarrollo del modelo cuantizado**
+   - Utilizar HuggingFace para seleccionar un modelo preentrenado y aplicar cuantización en PyTorch.
+
+3. **Ejercicio 3: Implementación de la herramienta de Tavily**
+   - Escripturar una función que comunique con Tavily para recopilar información.
+
+4. **Ejercicio 4: Integramiento del agente en LangGraph**
+   - Configurar los nodos y accionadores según el esquema definido.
+
+5. **Ejercicio 5: Validación y pruebas**
+   - Probar la funcionalidad del agente con diferentes inputs.
+   - Documentar cada etapa del ejercicio para su presentación.
+
+6. **Ejercicio 6: Evaluación**
+   - Analizar el rendimiento del agente y asegurar que todos los componentes están correctamente implementados.
+
+---
+
+### Resolución de los Problemas
+
+1. **Validación del Agente**
+   
+   Para verificar si un agente ReAct funciona correctamente, sigue estos pasos:
+   
+   1. **Ejecución con Inputs Conocidos**: Ejecuta el agente con combinaciones específicas de entradas y observa las salidas generadas.
+   2. **Análisis de Estructura**: Verifica que cada nodo del LangGraph procesa correctamente los datos, pasándolos adequateamente a los nodos adyacentes.
+   3. **Pruebas Extensivas**: Prueba diferentes combinaciones de inputs para asegurar la consistencia y robustez del agente.
+
+2. **Mejoramiento del Modelo Cuantizado**
+   
+   Asegúrate de que el modelo cuantizado:
+   
+   - Tiene un tamaño adecuado para el dispositivo de procesamiento utilizado (CPU, GPU, etc.).
+   - Ofrece una balancea entre precisión y eficiencia en Resource consumption.
+   - Se ajustan los parámetros del entrenamiento si es necesario.
+
+3. **Integración Mejorada con Tavily**
+   
+   Para mejorar la integración:
+   
+   1. Personaliza las rutas de llamada para asegurar que las funciones de investigación estén correctamente configuradas.
+   2. Añade controles adicionales en los datos devueltos por Tavily para garantizar su calidad y usabilidad.
+
+4. **Manejo de excepciones en PyTorch**
+   
+   Algunas maneras de gestionar excepciones incluyen:
+   
+   - Configurando apropiadamente las herramientas de error handling.
+   - Manteniendo control del flujo con estructuras condicionales para manejar situaciones críticas.
+   - Considerando la precisión numérica y los flotantes en el modelo.
+
+5. **Elección Optima del Modelo**
+   
+   Al seleccionar un modelo, considera:
+   
+   1. El tamaño del dataset disponible: Si tienes pocos ejemplos, opta por-modelos más pequeño.
+   2. La complejidad del problema: Un problema más difícil may requiere un modelo más grande y complejo.
+   3. Los recursos disponibles: Considera el poder de procesamiento y la memoria para seleccionar un tamaño adecuado.
+
+6. **Manejo Diferentes Tipos de Estructuras**
+   
+   Personaliza los esquemas del agente ReAct para manejar diferentes tipos de datos, asegurando que cada tipo se procesa correctamente en su etapa correspondiente.
+
+---
+
+### Preguntas y Respuestas
+
+¿Cómo puedo asegurar que mi agente ReAct funcione correctamente?
+
+1. Ejecuta el agente con inputs conocidos y verifica las salidas.
+2. Asegúrate de que los nodos del LangGraph están correctamente configurados.
+3. Prueba diferentes combinaciones de inputs para verificar la robustez.
+
+¿Cómo puedo mejorar mi modelo cuantizado?
+
+- Ajusta los parámetros de entrenamiento más finamente.
+- Realiza pruebas exhaustivas con diferentes entradas.
+- Utiliza técnicas de validación avanzadas para evitar el sobreajuste.
+
+¿Cómo puedo integrar mejor con Tavily?
+
+1. Personaliza las rutas de llamada de investigación.
+2. Añade controles en los datos devueltos por Tavily.
+3. Considera la precisión numérica y flotantes del modelo para mejorar el procesamiento.
+
+¿Cómo manejo los errores en PyTorch?
+
+- Configura apropiadamente las herramientas de error handling.
+- Mantén control del flujo con estructuras condicionales.
+- Asegúrate de que las operaciones matemáticas se realizan con precisión suficiente.
+
+¿Cómo puedo seleccionar un modelo optimo para mi problema?
+
+- Considera el tamaño del dataset y su complejidad.
+- Elegir un modelo balanceado entre rendimiento y recursos necesarios.
+
