@@ -72,7 +72,7 @@ you can explain the nature and behavior of the AI/ML model.
 
 ---
 layout: "image-left"
-image: "../recursos/privacy-dall·3.png"
+image: "../recursos/privacy-dalle3.png"
 ---
 # Privacidad y seguridad
 Uso responsable de la IA
@@ -181,7 +181,7 @@ Las dimensiones de la IA responsable
 ::right::
 <br>
 <div class="image-container">
-    <img src="https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1743804000/InIXiZi6tTNf46TuRw14HQ/tincan/1795780_1731946240_o_1id00k8mrapu1j8e1un5ctcr6nb_zip/assets/Responsible%20AI%20core%20dimensions.png" alt="Retos en la IA y las dimensiones de la IA responsable">
+    <img src="../recursos/ResponsibleAI_Core_dimensions.png" alt="Retos en la IA y las dimensiones de la IA responsable">
 </div>
 
 ---
