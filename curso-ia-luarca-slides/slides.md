@@ -388,7 +388,7 @@ class: "text-sm"
 # Un último ejemplo
 Forzando formatos
 
-OpenAI dispone de la herramienta [Canvas](https://openai.com/index/introducing-canvas/) integrada en ChatGPT. Para este ejemplo usaremos una herramienta similar de Mistral: [LeChat](https://chat.mistral.ai/), ya que permite más opciones de personalización.
+OpenAI dispone de la herramienta [Canvas](https://openai.com/index/introducing-canvas/) integrada en ChatGPT. Para [este ejemplo](https://github.com/jllorian/curso-ia-docentes/blob/main/examples.md#profesor-de-dibujo-art%C3%ADstico-de-1%C2%BA-de-bachillerato) usaremos una herramienta similar de Mistral: [LeChat](https://chat.mistral.ai/), ya que permite más opciones de personalización.
 
 Pero **nada** nos impide, ante cualquier modelo, indicarle un formato de salida específico en el prompt^[Los modelos de llama3 y ChatGPT-4o tienen un parámetro para forzar el formato de salida. En el caso de llama3, es el parámetro `--output-format` y en el caso de ChatGPT-4o es el parámetro `--format`.] como: `HTML`, `JSON`, o 
 `Markdown`. Pero en otras plataformas, necesitaremos traspasar la respuesta del modelo a otro servicio que represente el formato.

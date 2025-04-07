@@ -253,9 +253,9 @@ Durante el proceso de inferencia, el modelo trata de reconocer patrones en la in
 ---
 
 # ¡Veámoslo en otro ejemplo!
-El rápido progreso en *GenAI* nos permite usar LLMs en local. Suelen ser versiones "reducidas" adaptadas a las capacidades de nuestra máquina.
+El rápido progreso en *GenAI* nos permite usar LLMs en local. Suelen ser versiones "reducidas" adaptadas a las capacidades de nuestra máquina. [Link ejemplo](https://github.com/jllorian/curso-ia-docentes/blob/main/examples.md#conversaci%C3%B3n-con-deepseek-r1).
 
-[Ollama](https://ollama.com/download) es una herrmienta que permite usar *GenAI* en tu ordedador, sin necesidad de internet.
+[Ollama](https://ollama.com/download) es una herramienta que permite usar *GenAI* en tu ordenador, sin necesidad de internet.
 
 ````md magic-move {lines: true}
 ```zsh {*}
