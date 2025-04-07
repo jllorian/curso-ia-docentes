@@ -365,10 +365,6 @@ src: ./pages/risks-bias-rag.md
 transition: slide-left
 ---
 ---
-src: ./pages/glosario.md
-transition: slide-left
----
----
 layout: "image-right"
 image: "./recursos/EssayWriter-DeepLearning.ai.png"
 transition: slide-up
@@ -453,3 +449,8 @@ img {
   background-color:rgb(255, 255, 255) !important;
 }
 </style>
+---
+src: ./pages/glosario.md
+transition: slide-left
+---
+
