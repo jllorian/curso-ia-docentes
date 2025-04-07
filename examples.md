@@ -846,3 +846,136 @@ La preparación y ejecución del ejercicio sobre la creación de un agente ReAct
 - Considera el tamaño del dataset y su complejidad.
 - Elegir un modelo balanceado entre rendimiento y recursos necesarios.
 
+# Profesor de dibujo artístico de 1º de Bachillerato
+
+Este ejemplo lo haremos con la función de *Canvas* de [LeChat](https://chat.mistral.ai/chat).
+![LeChat](/curso-ia-luarca-slides/recursos/LeChat.png)
+
+USER_MESSAGE="""
+Eres profesor de dibujo artístico en el IES Carmen y Severo Ochoa de Luarca para estudiantes de 1º de Bachillerato.
+
+Vas a preparar una clase en la que los alumnos van a dibujar un vanitas. El primer paso es diseñar la rúbrica del ejercicio. 
+Identifica competencias clave de acuerdo al Decreto 59/2022 de Asturias y la LOMLOE que los alumnos deben mostrar en el ejercicio 
+y haz la rúbrica en un canvas tipo tabla.
+"""
+AI_MESSAGE="""
+Para diseñar la rúbrica del ejercicio de dibujo de un vanitas para estudiantes de 1º de Bachillerato en el IES Carmen y Severo Ochoa de Luarca, es importante identificar las competencias clave que los estudiantes deben demostrar. Según el Decreto 59/2022 de Asturias y la LOMLOE, las competencias clave en el ámbito del dibujo artístico incluyen:
+
+1. **Competencia en expresión y comprensión cultural y artística**: Los estudiantes deben ser capaces de interpretar y expresar ideas, emociones y experiencias a través del dibujo, utilizando técnicas y recursos artísticos adecuados.
+
+2. **Competencia en apreciación crítica**: Los estudiantes deben desarrollar la capacidad de analizar y valorar obras de arte, comprendiendo su contexto histórico y cultural, y relacionándolas con su propia producción artística.
+
+3. **Competencia en creatividad**: Los estudiantes deben demostrar originalidad y innovación en sus dibujos, explorando nuevas ideas y soluciones visuales.
+
+4. **Competencia en comunicación visual**: Los estudiantes deben ser capaces de comunicar mensajes y significados a través de sus dibujos, utilizando elementos visuales como la forma, el color, la textura y la composición.
+
+5. **Competencia en uso de herramientas y técnicas artísticas**: Los estudiantes deben manejar con destreza diversas herramientas y técnicas de dibujo, como el lápiz, el carboncillo, la tinta, entre otros, y aplicarlas de manera adecuada en sus trabajos.
+
+A continuación, se presenta la rúbrica para evaluar el ejercicio de dibujo de un vanitas:
+
+
+
+
+| **Competencia** | **Excelente (4 puntos)** | **Bueno (3 puntos)** | **Suficiente (2 puntos)** | **Insuficiente (1 punto)** |
+|-----------------|--------------------------|----------------------|--------------------------|--------------------------|
+| **Expresión y comprensión cultural y artística** | El estudiante interpreta y expresa ideas, emociones y experiencias de manera clara y profunda, utilizando técnicas y recursos artísticos adecuados. | El estudiante interpreta y expresa ideas, emociones y experiencias de manera clara, pero con alguna limitación en el uso de técnicas y recursos artísticos. | El estudiante interpreta y expresa ideas, emociones y experiencias de manera básica, con limitaciones en el uso de técnicas y recursos artísticos. | El estudiante tiene dificultades para interpretar y expresar ideas, emociones y experiencias, y presenta errores significativos en el uso de técnicas y recursos artísticos. |
+| **Apreciación crítica** | El estudiante analiza y valora obras de arte de manera crítica y fundamentada, relacionándolas con su propia producción artística y su contexto histórico y cultural. | El estudiante analiza y valora obras de arte de manera crítica, pero con alguna limitación en la fundamentación o en la relación con su propia producción artística y su contexto histórico y cultural. | El estudiante analiza y valora obras de arte de manera básica, con limitaciones en la fundamentación y en la relación con su propia producción artística y su contexto histórico y cultural. | El estudiante tiene dificultades para analizar y valorar obras de arte de manera crítica, y presenta errores significativos en la fundamentación y en la relación con su propia producción artística y su contexto histórico y cultural. |
+| **Creatividad** | El estudiante demuestra una gran originalidad e innovación en sus dibujos, explorando nuevas ideas y soluciones visuales de manera efectiva. | El estudiante demuestra originalidad e innovación en sus dibujos, pero con alguna limitación en la exploración de nuevas ideas y soluciones visuales. | El estudiante demuestra originalidad e innovación en sus dibujos de manera básica, con limitaciones en la exploración de nuevas ideas y soluciones visuales. | El estudiante tiene dificultades para demostrar originalidad e innovación en sus dibujos, y presenta errores significativos en la exploración de nuevas ideas y soluciones visuales. |
+| **Comunicación visual** | El estudiante comunica mensajes y significados de manera clara y efectiva a través de sus dibujos, utilizando elementos visuales como la forma, el color, la textura y la composición de manera adecuada. | El estudiante comunica mensajes y significados de manera clara a través de sus dibujos, pero con alguna limitación en el uso de elementos visuales como la forma, el color, la textura y la composición. | El estudiante comunica mensajes y significados de manera básica a través de sus dibujos, con limitaciones en el uso de elementos visuales como la forma, el color, la textura y la composición. | El estudiante tiene dificultades para comunicar mensajes y significados a través de sus dibujos, y presenta errores significativos en el uso de elementos visuales como la forma, el color, la textura y la composición. |
+| **Uso de herramientas y técnicas artísticas** | El estudiante maneja con destreza diversas herramientas y técnicas de dibujo, aplicándolas de manera adecuada y efectiva en sus trabajos. | El estudiante maneja diversas herramientas y técnicas de dibujo, pero con alguna limitación en su aplicación adecuada y efectiva en sus trabajos. | El estudiante maneja diversas herramientas y técnicas de dibujo de manera básica, con limitaciones en su aplicación adecuada y efectiva en sus trabajos. | El estudiante tiene dificultades para manejar diversas herramientas y técnicas de dibujo, y presenta errores significativos en su aplicación adecuada y efectiva en sus trabajos. |
+
+
+
+
+Esta rúbrica permitirá evaluar de manera objetiva y estructurada el desempeño de los estudiantes en el ejercicio de dibujo de un vanitas, teniendo en cuenta las competencias clave establecidas en el Decreto 59/2022 de Asturias y la LOMLOE.
+"""
+
+![Rúbrica generada por LeChat](/curso-ia-luarca-slides/recursos/rubrica-mistral.png)
+
+USER_MESSAGE="""
+El segundo paso es hacer una representación de cómo han de estimar los tamaños de los distintos objetos del vanitas.
+
+Prepara un canvas tipo svg que muestre:
+1. Una superficie con tres formas de distinto tamaño (el vanitas a representar)
+2. Un ojo a cierta distancia de la superficie.
+3. Una referencia que use el ojo y líneas que indiquen cómo se usa esa referencia para estimar el tamaño de una de las formas del vanitas.
+"""
+
+AI_MESSAGE="""
+Para ayudar a los estudiantes a estimar los tamaños de los distintos objetos en un vanitas, he creado un diagrama en SVG que muestra una superficie con tres formas de diferentes tamaños, un ojo a cierta distancia de la superficie, y líneas que indican cómo usar el ojo como referencia para estimar el tamaño de una de las formas.
+
+
+
+<svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Superficie con tres formas de distinto tamaño -->
+  <rect x="100" y="300" width="600" height="200" fill="#f0f0f0" stroke="#000" stroke-width="2"/>
+  <circle cx="200" cy="400" r="30" fill="#c0c0c0" stroke="#000" stroke-width="2"/>
+  <rect x="350" y="350" width="60" height="100" fill="#a0a0a0" stroke="#000" stroke-width="2"/>
+  <ellipse cx="550" cy="400" rx="50" ry="25" fill="#808080" stroke="#000" stroke-width="2"/>
+
+  <!-- Ojo a cierta distancia de la superficie -->
+  <circle cx="400" cy="150" r="20" fill="#fff" stroke="#000" stroke-width="2"/>
+  <circle cx="395" cy="145" r="5" fill="#000"/>
+
+  <!-- Líneas que indican cómo usar el ojo como referencia -->
+  <line x1="400" y1="150" x2="200" y2="400" stroke="#ff0000" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="400" y1="150" x2="350" y2="350" stroke="#ff0000" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="400" y1="150" x2="550" y2="400" stroke="#ff0000" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Texto explicativo -->
+  <text x="410" y="140" font-family="Arial" font-size="20" fill="#000">Ojo</text>
+  <text x="210" y="390" font-family="Arial" font-size="20" fill="#ff0000">Forma 1</text>
+  <text x="360" y="340" font-family="Arial" font-size="20" fill="#ff0000">Forma 2</text>
+  <text x="560" y="390" font-family="Arial" font-size="20" fill="#ff0000">Forma 3</text>
+</svg>
+
+
+
+Este diagrama ayudará a los estudiantes a visualizar cómo estimar los tamaños de los objetos en su vanitas utilizando la perspectiva y la referencia del ojo.
+"""
+
+USER_MESSAGE="""
+El tercer paso es realizar una presentación de tres diapositivas. Haz un canvas tipo slides con las siguientes diapositivas:
+1. Título del ejercicio
+2. Introduce brevemente a los alumnos qué es un vanitas.
+3. Representa una versión abreviada de la rúbrica de evaluación.
+"""
+
+AI_MESSAGE="""
+Here is the canvas with the presentation:
+
+
+
+
+<slides>
+
+# Título del ejercicio
+
+## Dibujo de un vanitas
+
+---
+
+# ¿Qué es un vanitas?
+
+- **Definición**: Un vanitas es un género de pintura de naturaleza muerta que simboliza la fugacidad de la vida, la vanidad de los placeres terrenales y la certeza de la muerte.
+- **Origen**: El término proviene del latín "vanitas", que significa "vanidad" o "vacío".
+- **Simbolismo**: Las pinturas de vanitas suelen incluir objetos como calaveras, relojes de arena, velas apagadas, flores marchitas y libros, cada uno con un significado simbólico específico.
+- **Propósito**: Estas obras invitan a la reflexión sobre la brevedad de la vida y la inevitabilidad de la muerte, recordando al espectador la importancia de vivir una vida virtuosa y prepararse para el juicio final.
+
+---
+
+# Rúbrica de evaluación
+
+| **Competencia** | **Excelente (4 puntos)** | **Bueno (3 puntos)** | **Suficiente (2 puntos)** | **Insuficiente (1 punto)** |
+|-----------------|--------------------------|----------------------|--------------------------|--------------------------|
+| **Expresión y comprensión cultural y artística** | El estudiante interpreta y expresa ideas, emociones y experiencias de manera clara y profunda, utilizando técnicas y recursos artísticos adecuados. | El estudiante interpreta y expresa ideas, emociones y experiencias de manera clara, pero con alguna limitación en el uso de técnicas y recursos artísticos. | El estudiante interpreta y expresa ideas, emociones y experiencias de manera básica, con limitaciones en el uso de técnicas y recursos artísticos. | El estudiante tiene dificultades para interpretar y expresar ideas, emociones y experiencias, y presenta errores significativos en el uso de técnicas y recursos artísticos. |
+| **Uso de herramientas y técnicas artísticas** | El estudiante maneja con destreza diversas herramientas y técnicas de dibujo, aplicándolas de manera adecuada y efectiva en sus trabajos. | El estudiante maneja diversas herramientas y técnicas de dibujo, pero con alguna limitación en su aplicación adecuada y efectiva en sus trabajos. | El estudiante maneja diversas herramientas y técnicas de dibujo de manera básica, con limitaciones en su aplicación adecuada y efectiva en sus trabajos. | El estudiante tiene dificultades para manejar diversas herramientas y técnicas de dibujo, y presenta errores significativos en su aplicación adecuada y efectiva en sus trabajos. |
+| **Creatividad** | El estudiante demuestra una gran originalidad e innovación en sus dibujos, explorando nuevas ideas y soluciones visuales de manera efectiva. | El estudiante demuestra originalidad e innovación en sus dibujos, pero con alguna limitación en la exploración de nuevas ideas y soluciones visuales. | El estudiante demuestra originalidad e innovación en sus dibujos de manera básica, con limitaciones en la exploración de nuevas ideas y soluciones visuales. | El estudiante tiene dificultades para demostrar originalidad e innovación en sus dibujos, y presenta errores significativos en la exploración de nuevas ideas y soluciones visuales. |
+| **Comunicación visual** | El estudiante comunica mensajes y significados de manera clara y efectiva a través de sus dibujos, utilizando elementos visuales como la forma, el color, la textura y la composición de manera adecuada. | El estudiante comunica mensajes y significados de manera clara a través de sus dibujos, pero con alguna limitación en el uso de elementos visuales como la forma, el color, la textura y la composición. | El estudiante comunica mensajes y significados de manera básica a través de sus dibujos, con limitaciones en el uso de elementos visuales como la forma, el color, la textura y la composición. | El estudiante tiene dificultades para comunicar mensajes y significados a través de sus dibujos, y presenta errores significativos en el uso de elementos visuales como la forma, el color, la textura y la composición. |
+| **Apreciación crítica** | El estudiante analiza y valora obras de arte de manera crítica y fundamentada, relacionándolas con su propia producción artística y su contexto histórico y cultural. | El estudiante analiza y valora obras de arte de manera crítica, pero con alguna limitación en la fundamentación o en la relación con su propia producción artística y su contexto histórico y cultural. | El estudiante analiza y valora obras de arte de manera básica, con limitaciones en la fundamentación y en la relación con su propia producción artística y su contexto histórico y cultural. | El estudiante tiene dificultades para analizar y valorar obras de arte de manera crítica, y presenta errores significativos en la fundamentación y en la relación con su propia producción artística y su contexto histórico y cultural. |
+
+</slides>
+
+"""
+
+Mistral nos permite trabajar sobre los canvas, introducir nuestras propias modificaciones y pedirle que continue editando.

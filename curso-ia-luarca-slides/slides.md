@@ -369,13 +369,49 @@ src: ./pages/glosario.md
 transition: slide-left
 ---
 ---
-layout: "default"
-class: text-center
+layout: "image-right"
+image: "./recursos/EssayWriter-DeepLearning.ai.png"
 transition: slide-up
 ---
 # El ~~futuro~~ presente de la IA
 Agentes
 
+<v-clicks>
+- Un **agente de IA** es un sistema diseñado para *percibir su entorno*, *procesar información* y *tomar decisiones* o realizar acciones de manera **autónoma** para alcanzar un objetivo específico.
+- Estos agentes pueden interactuar con su entorno a través de **sensores** (*entrada de datos*) y **actuadores** (*salida o ejecución de acciones*), *adaptándose* y *aprendiendo de la experiencia* para mejorar su desempeño.
+</v-clicks>
+
+---
+layout: "two-cols"
+class: "text-sm"
+---
+# Un último ejemplo
+Forzando formatos
+
+OpenAI dispone de la herramienta [Canvas](https://openai.com/index/introducing-canvas/) integrada en ChatGPT. Para este ejemplo usaremos una herramienta similar de Mistral: [LeChat](https://chat.mistral.ai/), ya que permite más opciones de personalización.
+
+Pero **nada** nos impide, ante cualquier modelo, indicarle un formato de salida específico en el prompt^[Los modelos de llama3 y ChatGPT-4o tienen un parámetro para forzar el formato de salida. En el caso de llama3, es el parámetro `--output-format` y en el caso de ChatGPT-4o es el parámetro `--format`.] como: `HTML`, `JSON`, o 
+`Markdown`. Pero en otras plataformas, necesitaremos traspasar la respuesta del modelo a otro servicio que represente el formato.
+
+```
+<canvaentity 
+  identifier="ejemplo"
+  type="slides"
+  title="Ejemplo de presentación">
+Contenido de la presentación.
+</canvaentity> 
+```
+::right::
+
+Tipos de *canvas* en *LeChat*:
+- `code`: para código
+- <code v-mark.orange="1">slides</code>: para presentaciones.
+- `mermaid`: para diagramas de *mermaid*.
+- <code v-mark.orange="2">text/html</code>: para contenido en HTML.
+- `svg`: para gráficos vectoriales.
+- `react`: para componentes de React.
+- <code v-mark.orange="3">table</code>: para tablas.
+- <code v-mark.orange="4">text/markdown</code>: para texto estructurado como Markdown.
 
 ---
 layout: "end"
