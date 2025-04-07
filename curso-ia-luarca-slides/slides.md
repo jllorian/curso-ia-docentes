@@ -369,12 +369,17 @@ src: ./pages/glosario.md
 transition: slide-left
 ---
 ---
-layout: "default"
-class: text-center
+layout: "image-right"
+image: "./recursos/EssayWriter-DeepLearning.ai.png"
 transition: slide-up
 ---
 # El ~~futuro~~ presente de la IA
 Agentes
+
+<v-clicks>
+- Un **agente de IA** es un sistema diseñado para *percibir su entorno*, *procesar información* y *tomar decisiones* o realizar acciones de manera **autónoma** para alcanzar un objetivo específico.
+- Estos agentes pueden interactuar con su entorno a través de **sensores** (*entrada de datos*) y **actuadores** (*salida o ejecución de acciones*), *adaptándose* y *aprendiendo de la experiencia* para mejorar su desempeño.
+</v-clicks>
 
 ---
 layout: "two-cols"
