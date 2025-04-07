@@ -365,17 +365,29 @@ src: ./pages/risks-bias-rag.md
 transition: slide-left
 ---
 ---
-layout: "image-right"
-image: "./recursos/EssayWriter-DeepLearning.ai.png"
+layout: "default"
+class: text-center
 transition: slide-up
 ---
-# El ~~futuro~~ presente de la IA
+
+# El ~~futuro~~ presente de la IA  
 Agentes
 
-<v-clicks>
-- Un **agente de IA** es un sistema diseñado para *percibir su entorno*, *procesar información* y *tomar decisiones* o realizar acciones de manera **autónoma** para alcanzar un objetivo específico.
-- Estos agentes pueden interactuar con su entorno a través de **sensores** (*entrada de datos*) y **actuadores** (*salida o ejecución de acciones*), *adaptándose* y *aprendiendo de la experiencia* para mejorar su desempeño.
-</v-clicks>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="flex: 1; padding-right: 20px;">
+    <v-click>
+      <p>
+        Un <strong>agente de IA</strong> es un sistema diseñado para <em>percibir su entorno</em>, <em>procesar información</em> y <em>tomar decisiones</em> o realizar acciones de manera <strong>autónoma</strong> para alcanzar un objetivo específico.
+      </p>
+      <p>
+        Estos agentes pueden interactuar con su entorno a través de <strong>sensores</strong> (<em>entrada de datos</em>) y <strong>actuadores</strong> (<em>salida o ejecución de acciones</em>), <em>adaptándose</em> y <em>aprendiendo de la experiencia</em> para mejorar su desempeño.
+      </p>
+    </v-click>
+  </div>
+  <div style="flex: 1; text-align: right;">
+    <img src="./recursos/EssayWriter-DeepLearning.ai.png" alt="Agente de redacción" style="max-width: 40%; height: auto;">
+  </div>
+</div>
 
 ---
 layout: "two-cols"
